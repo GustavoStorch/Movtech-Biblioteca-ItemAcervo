@@ -185,7 +185,7 @@
             this.txtCodItemAcervo.Location = new System.Drawing.Point(150, 15);
             this.txtCodItemAcervo.MaxLength = 3;
             this.txtCodItemAcervo.Name = "txtCodItemAcervo";
-            this.txtCodItemAcervo.Size = new System.Drawing.Size(444, 26);
+            this.txtCodItemAcervo.Size = new System.Drawing.Size(296, 26);
             this.txtCodItemAcervo.TabIndex = 14;
             // 
             // txtNomeItemAcervo
