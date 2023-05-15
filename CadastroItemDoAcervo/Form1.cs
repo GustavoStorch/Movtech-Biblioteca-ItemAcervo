@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CadastroItemDoAcervo
 {
@@ -50,6 +51,7 @@ namespace CadastroItemDoAcervo
                         dao.Excluir(new ItemAcervoModel()
                         {
                             CodItem = txtCodItemAcervo.Text,
+                            CodAutor = txtNomeAutorAcervo.Text
                         });
                     }
                     MessageBox.Show("Item do acervo excluído com sucesso!");

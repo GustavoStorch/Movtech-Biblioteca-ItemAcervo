@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCodAcervo = new System.Windows.Forms.Label();
             this.lblNomeAcervo = new System.Windows.Forms.Label();
             this.lblNomeLocalAcervo = new System.Windows.Forms.Label();
@@ -57,7 +58,21 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dtgDadosItemAcervo = new System.Windows.Forms.DataGridView();
+            this.mvtBibAutorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.treinamentoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mvtBibAutorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.treinamentoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mvtBibEditoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colCodItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeAutorItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatusItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosItemAcervo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibEditoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodAcervo
@@ -351,14 +366,61 @@
             this.dtgDadosItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgDadosItemAcervo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDadosItemAcervo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDadosItemAcervo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodItemAcervo,
+            this.colNomeItemAcervo,
+            this.colNomeAutorItemAcervo,
+            this.colStatusItemAcervo});
             this.dtgDadosItemAcervo.Location = new System.Drawing.Point(16, 479);
             this.dtgDadosItemAcervo.Name = "dtgDadosItemAcervo";
             this.dtgDadosItemAcervo.ReadOnly = true;
             this.dtgDadosItemAcervo.RowHeadersWidth = 62;
             this.dtgDadosItemAcervo.RowTemplate.Height = 28;
+            this.dtgDadosItemAcervo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDadosItemAcervo.Size = new System.Drawing.Size(923, 344);
             this.dtgDadosItemAcervo.TabIndex = 31;
+            // 
+            // mvtBibAutorBindingSource
+            // 
+            this.mvtBibAutorBindingSource.DataMember = "mvtBibAutor";
+            // 
+            // mvtBibAutorBindingSource1
+            // 
+            this.mvtBibAutorBindingSource1.DataMember = "mvtBibAutor";
+            // 
+            // mvtBibEditoraBindingSource
+            // 
+            this.mvtBibEditoraBindingSource.DataMember = "mvtBibEditora";
+            // 
+            // colCodItemAcervo
+            // 
+            this.colCodItemAcervo.HeaderText = "Código";
+            this.colCodItemAcervo.MinimumWidth = 8;
+            this.colCodItemAcervo.Name = "colCodItemAcervo";
+            this.colCodItemAcervo.ReadOnly = true;
+            // 
+            // colNomeItemAcervo
+            // 
+            this.colNomeItemAcervo.HeaderText = "Nome";
+            this.colNomeItemAcervo.MinimumWidth = 8;
+            this.colNomeItemAcervo.Name = "colNomeItemAcervo";
+            this.colNomeItemAcervo.ReadOnly = true;
+            // 
+            // colNomeAutorItemAcervo
+            // 
+            this.colNomeAutorItemAcervo.HeaderText = "Nome do Autor";
+            this.colNomeAutorItemAcervo.MinimumWidth = 8;
+            this.colNomeAutorItemAcervo.Name = "colNomeAutorItemAcervo";
+            this.colNomeAutorItemAcervo.ReadOnly = true;
+            // 
+            // colStatusItemAcervo
+            // 
+            this.colStatusItemAcervo.HeaderText = "Status";
+            this.colStatusItemAcervo.MinimumWidth = 8;
+            this.colStatusItemAcervo.Name = "colStatusItemAcervo";
+            this.colStatusItemAcervo.ReadOnly = true;
             // 
             // Form1
             // 
@@ -400,6 +462,11 @@
             this.Text = "Novo Item do Acervo";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosItemAcervo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtBibEditoraBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +502,15 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dtgDadosItemAcervo;
+        private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource;
+        private System.Windows.Forms.BindingSource mvtBibAutorBindingSource;
+        private System.Windows.Forms.BindingSource mvtBibAutorBindingSource1;
+        private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource1;
+        private System.Windows.Forms.BindingSource mvtBibEditoraBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeAutorItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatusItemAcervo;
     }
 }
 
