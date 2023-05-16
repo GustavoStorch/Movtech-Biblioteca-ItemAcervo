@@ -85,22 +85,18 @@ namespace CadastroItemDoAcervo
                 cbxNomeAutor.DataSource = autores;
                 cbxNomeAutor.DisplayMember = "nomeAutor";
                 cbxNomeAutor.ValueMember = "codAutor";
-                //cbxNomeAutor.SelectedIndex = -1;
 
                 cbxNomeEditora.DataSource = editoras;
                 cbxNomeEditora.DisplayMember = "nomeEditora";
                 cbxNomeEditora.ValueMember = "codEditora";
-                //cbxNomeEditora.SelectedIndex = -1;
 
                 cbxNomeLocal.DataSource = locais;
                 cbxNomeLocal.DisplayMember = "descricaoLocal";
                 cbxNomeLocal.ValueMember = "codLocal";
-                //cbxNomeLocal.SelectedIndex = -1;
 
                 cbxNomeSecao.DataSource = secoes;
                 cbxNomeSecao.DisplayMember = "descricaoSecao";
                 cbxNomeSecao.ValueMember = "codSecao";
-                //cbxNomeSecao.SelectedIndex = -1;
             }
 
         }
@@ -114,6 +110,7 @@ namespace CadastroItemDoAcervo
                 {
                     ItemAcervoDAO dao = new ItemAcervoDAO(connection);
 
+                    //Verifica se os campos estão preenchidos corretamente
                     bool verificaCampos = dao.VerificaCampos(new ItemAcervoModel()
                     {
                         NumExemplar = txtNumExemplarAcervo.Text,
@@ -130,6 +127,7 @@ namespace CadastroItemDoAcervo
                         DescricaoLocal = cbxNomeLocal.Text
                     });
 
+                    //busca o id do autor, editora, local e secao selecionados para salvar no banco de dados.
                     int codAutor = dao.GetCodAutor(new AutorModel()
                     {
                         NomeAutor = cbxNomeAutor.Text
@@ -150,36 +148,80 @@ namespace CadastroItemDoAcervo
                         DescricaoSecao = cbxNomeSecao.Text
                     });
 
-                    dao.Salvar(new ItemAcervoModel()
+                    if(verificaCampos)
                     {
-                        NumExemplar = txtNumExemplarAcervo.Text,
-                        Nome = txtNomeItemAcervo.Text,
-                        TipoItem = cbxTipoItemAcervo.Text,
-                        Volume = txtVolumeAcervo.Text,
-                        AnoEdicao = txtAnoEdicaoAcervo.Text,
-                        Localizacao = txtLocalizacaoAcervo.Text,
-                        NomeColecao = txtNomeColecaoAcervo.Text,
-                        StatusItem = cbxStatusAcervo.Text
+                        int count = dao.VerificaRegistros(new ItemAcervoModel()
+                        {
+                            CodItem = txtCodItemAcervo.Text
+                        });
 
-                    }, new AutorModel()
-                    {
-                        CodAutor = codAutor,
-                        NomeAutor = cbxNomeAutor.Text
-                    }, new EditoraModel()
-                    {
-                        CodEditora = codEditora,
-                        NomeEditora = cbxNomeEditora.Text
-                    }, new LocalModel()
-                    {
-                        CodLocal = codLocal,
-                        DescricaoLocal = cbxNomeLocal.Text
-                    }, new SecaoModel()
-                    {
-                        CodSecao = codSecao,
-                        DescricaoSecao = cbxNomeSecao.Text
-                    });
-                    MessageBox.Show("leitor salva com sucesso!");
-                    limparForm();
+                        if(count > 0)
+                        {
+                            dao.Editar(new ItemAcervoModel()
+                            {
+                                CodItem = txtCodItemAcervo.Text,
+                                NumExemplar = txtNumExemplarAcervo.Text,
+                                Nome = txtNomeItemAcervo.Text,
+                                TipoItem = cbxTipoItemAcervo.Text,
+                                Volume = txtVolumeAcervo.Text,
+                                AnoEdicao = txtAnoEdicaoAcervo.Text,
+                                Localizacao = txtLocalizacaoAcervo.Text,
+                                NomeColecao = txtNomeColecaoAcervo.Text,
+                                StatusItem = cbxStatusAcervo.Text
+                            }, new AutorModel()
+                            {
+                                CodAutor = codAutor,
+                                NomeAutor = cbxNomeAutor.Text
+                            }, new EditoraModel()
+                            {
+                                CodEditora = codEditora,
+                                NomeEditora = cbxNomeEditora.Text
+                            }, new LocalModel()
+                            {
+                                CodLocal = codLocal,
+                                DescricaoLocal = cbxNomeLocal.Text
+                            }, new SecaoModel()
+                            {
+                                CodSecao = codSecao,
+                                DescricaoSecao = cbxNomeSecao.Text
+                            });
+                            MessageBox.Show("Item do acervo atualizado com sucesso!");
+                            limparForm();
+                        } 
+                        else
+                        {
+                            dao.Salvar(new ItemAcervoModel()
+                            {
+                                NumExemplar = txtNumExemplarAcervo.Text,
+                                Nome = txtNomeItemAcervo.Text,
+                                TipoItem = cbxTipoItemAcervo.Text,
+                                Volume = txtVolumeAcervo.Text,
+                                AnoEdicao = txtAnoEdicaoAcervo.Text,
+                                Localizacao = txtLocalizacaoAcervo.Text,
+                                NomeColecao = txtNomeColecaoAcervo.Text,
+                                StatusItem = cbxStatusAcervo.Text
+
+                            }, new AutorModel()
+                            {
+                                CodAutor = codAutor,
+                                NomeAutor = cbxNomeAutor.Text
+                            }, new EditoraModel()
+                            {
+                                CodEditora = codEditora,
+                                NomeEditora = cbxNomeEditora.Text
+                            }, new LocalModel()
+                            {
+                                CodLocal = codLocal,
+                                DescricaoLocal = cbxNomeLocal.Text
+                            }, new SecaoModel()
+                            {
+                                CodSecao = codSecao,
+                                DescricaoSecao = cbxNomeSecao.Text
+                            });
+                            MessageBox.Show("Item do acervo salvo com sucesso!");
+                            limparForm();
+                        }
+                    }
                     InitializeTable();
                     CarregaID();
                     btnExcluir.Enabled = false;
