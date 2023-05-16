@@ -64,6 +64,15 @@
             this.cbxNomeEditora = new System.Windows.Forms.ComboBox();
             this.cbxNomeSecao = new System.Windows.Forms.ComboBox();
             this.colCodItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeAutorItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeEditItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeLocalItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVolumeItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAnoEdicaoItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLocItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeSecaoItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeColecaoitemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumExempItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatusItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -330,6 +339,15 @@
             this.dtgDadosItemAcervo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDadosItemAcervo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodItemAcervo,
+            this.colNomeAutorItemAcervo,
+            this.colNomeEditItemAcervo,
+            this.colTipoItemAcervo,
+            this.colNomeLocalItemAcervo,
+            this.colVolumeItemAcervo,
+            this.colAnoEdicaoItemAcervo,
+            this.colLocItemAcervo,
+            this.colNomeSecaoItemAcervo,
+            this.colNomeColecaoitemAcervo,
             this.colNomeItemAcervo,
             this.colNumExempItemAcervo,
             this.colStatusItemAcervo});
@@ -397,6 +415,74 @@
             this.colCodItemAcervo.MinimumWidth = 8;
             this.colCodItemAcervo.Name = "colCodItemAcervo";
             this.colCodItemAcervo.ReadOnly = true;
+            // 
+            // colNomeAutorItemAcervo
+            // 
+            this.colNomeAutorItemAcervo.HeaderText = "Nome do Autor";
+            this.colNomeAutorItemAcervo.MinimumWidth = 8;
+            this.colNomeAutorItemAcervo.Name = "colNomeAutorItemAcervo";
+            this.colNomeAutorItemAcervo.ReadOnly = true;
+            this.colNomeAutorItemAcervo.Visible = false;
+            // 
+            // colNomeEditItemAcervo
+            // 
+            this.colNomeEditItemAcervo.HeaderText = "Nome da Editora";
+            this.colNomeEditItemAcervo.MinimumWidth = 8;
+            this.colNomeEditItemAcervo.Name = "colNomeEditItemAcervo";
+            this.colNomeEditItemAcervo.ReadOnly = true;
+            this.colNomeEditItemAcervo.Visible = false;
+            // 
+            // colTipoItemAcervo
+            // 
+            this.colTipoItemAcervo.HeaderText = "Tipo do Item";
+            this.colTipoItemAcervo.MinimumWidth = 8;
+            this.colTipoItemAcervo.Name = "colTipoItemAcervo";
+            this.colTipoItemAcervo.ReadOnly = true;
+            // 
+            // colNomeLocalItemAcervo
+            // 
+            this.colNomeLocalItemAcervo.HeaderText = "Nome do Local";
+            this.colNomeLocalItemAcervo.MinimumWidth = 8;
+            this.colNomeLocalItemAcervo.Name = "colNomeLocalItemAcervo";
+            this.colNomeLocalItemAcervo.ReadOnly = true;
+            this.colNomeLocalItemAcervo.Visible = false;
+            // 
+            // colVolumeItemAcervo
+            // 
+            this.colVolumeItemAcervo.HeaderText = "Volume";
+            this.colVolumeItemAcervo.MinimumWidth = 8;
+            this.colVolumeItemAcervo.Name = "colVolumeItemAcervo";
+            this.colVolumeItemAcervo.ReadOnly = true;
+            // 
+            // colAnoEdicaoItemAcervo
+            // 
+            this.colAnoEdicaoItemAcervo.HeaderText = "Ano de Edição";
+            this.colAnoEdicaoItemAcervo.MinimumWidth = 8;
+            this.colAnoEdicaoItemAcervo.Name = "colAnoEdicaoItemAcervo";
+            this.colAnoEdicaoItemAcervo.ReadOnly = true;
+            // 
+            // colLocItemAcervo
+            // 
+            this.colLocItemAcervo.HeaderText = "Localização";
+            this.colLocItemAcervo.MinimumWidth = 8;
+            this.colLocItemAcervo.Name = "colLocItemAcervo";
+            this.colLocItemAcervo.ReadOnly = true;
+            this.colLocItemAcervo.Visible = false;
+            // 
+            // colNomeSecaoItemAcervo
+            // 
+            this.colNomeSecaoItemAcervo.HeaderText = "Seção";
+            this.colNomeSecaoItemAcervo.MinimumWidth = 8;
+            this.colNomeSecaoItemAcervo.Name = "colNomeSecaoItemAcervo";
+            this.colNomeSecaoItemAcervo.ReadOnly = true;
+            this.colNomeSecaoItemAcervo.Visible = false;
+            // 
+            // colNomeColecaoitemAcervo
+            // 
+            this.colNomeColecaoitemAcervo.HeaderText = "Nome da Coleção";
+            this.colNomeColecaoitemAcervo.MinimumWidth = 8;
+            this.colNomeColecaoitemAcervo.Name = "colNomeColecaoitemAcervo";
+            this.colNomeColecaoitemAcervo.ReadOnly = true;
             // 
             // colNomeItemAcervo
             // 
@@ -505,6 +591,15 @@
         private System.Windows.Forms.ComboBox cbxNomeEditora;
         private System.Windows.Forms.ComboBox cbxNomeSecao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeAutorItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeEditItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeLocalItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVolumeItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAnoEdicaoItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLocItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeSecaoItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeColecaoitemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeItemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumExempItemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatusItemAcervo;
