@@ -12,7 +12,7 @@ namespace CadastroItemDoAcervo
     public class SecaoModel
     {
         [Key()]
-        public string CodSecao { get; set; }
+        public int CodSecao { get; set; }
 
         public string DescricaoSecao { get; set; }
     }

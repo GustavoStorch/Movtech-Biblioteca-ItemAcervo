@@ -44,16 +44,12 @@
             this.lblStatusAcervo = new System.Windows.Forms.Label();
             this.txtCodItemAcervo = new System.Windows.Forms.TextBox();
             this.txtNomeItemAcervo = new System.Windows.Forms.TextBox();
-            this.txtNomeLocalItemAcervo = new System.Windows.Forms.TextBox();
-            this.txtNomeAutorAcervo = new System.Windows.Forms.TextBox();
-            this.txtNomeEditoraAcervo = new System.Windows.Forms.TextBox();
             this.txtNomeColecaoAcervo = new System.Windows.Forms.TextBox();
             this.cbxTipoItemAcervo = new System.Windows.Forms.ComboBox();
             this.txtNumExemplarAcervo = new System.Windows.Forms.TextBox();
             this.txtVolumeAcervo = new System.Windows.Forms.TextBox();
             this.txtAnoEdicaoAcervo = new System.Windows.Forms.TextBox();
             this.txtLocalizacaoAcervo = new System.Windows.Forms.TextBox();
-            this.txtSecaoAcervo = new System.Windows.Forms.TextBox();
             this.cbxStatusAcervo = new System.Windows.Forms.ComboBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -63,9 +59,13 @@
             this.mvtBibAutorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.treinamentoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mvtBibEditoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxNomeAutor = new System.Windows.Forms.ComboBox();
+            this.cbxNomeLocal = new System.Windows.Forms.ComboBox();
+            this.cbxNomeEditora = new System.Windows.Forms.ComboBox();
+            this.cbxNomeSecao = new System.Windows.Forms.ComboBox();
             this.colCodItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNomeAutorItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumExempItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatusItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosItemAcervo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource)).BeginInit();
@@ -213,36 +213,6 @@
             this.txtNomeItemAcervo.Size = new System.Drawing.Size(789, 26);
             this.txtNomeItemAcervo.TabIndex = 15;
             // 
-            // txtNomeLocalItemAcervo
-            // 
-            this.txtNomeLocalItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeLocalItemAcervo.Location = new System.Drawing.Point(150, 79);
-            this.txtNomeLocalItemAcervo.MaxLength = 50;
-            this.txtNomeLocalItemAcervo.Name = "txtNomeLocalItemAcervo";
-            this.txtNomeLocalItemAcervo.Size = new System.Drawing.Size(789, 26);
-            this.txtNomeLocalItemAcervo.TabIndex = 16;
-            // 
-            // txtNomeAutorAcervo
-            // 
-            this.txtNomeAutorAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeAutorAcervo.Location = new System.Drawing.Point(150, 111);
-            this.txtNomeAutorAcervo.MaxLength = 50;
-            this.txtNomeAutorAcervo.Name = "txtNomeAutorAcervo";
-            this.txtNomeAutorAcervo.Size = new System.Drawing.Size(296, 26);
-            this.txtNomeAutorAcervo.TabIndex = 17;
-            // 
-            // txtNomeEditoraAcervo
-            // 
-            this.txtNomeEditoraAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeEditoraAcervo.Location = new System.Drawing.Point(150, 143);
-            this.txtNomeEditoraAcervo.MaxLength = 50;
-            this.txtNomeEditoraAcervo.Name = "txtNomeEditoraAcervo";
-            this.txtNomeEditoraAcervo.Size = new System.Drawing.Size(296, 26);
-            this.txtNomeEditoraAcervo.TabIndex = 18;
-            // 
             // txtNomeColecaoAcervo
             // 
             this.txtNomeColecaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -311,16 +281,6 @@
             this.txtLocalizacaoAcervo.Size = new System.Drawing.Size(533, 26);
             this.txtLocalizacaoAcervo.TabIndex = 24;
             // 
-            // txtSecaoAcervo
-            // 
-            this.txtSecaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSecaoAcervo.Location = new System.Drawing.Point(150, 369);
-            this.txtSecaoAcervo.MaxLength = 50;
-            this.txtSecaoAcervo.Name = "txtSecaoAcervo";
-            this.txtSecaoAcervo.Size = new System.Drawing.Size(296, 26);
-            this.txtSecaoAcervo.TabIndex = 25;
-            // 
             // cbxStatusAcervo
             // 
             this.cbxStatusAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -371,7 +331,7 @@
             this.dtgDadosItemAcervo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodItemAcervo,
             this.colNomeItemAcervo,
-            this.colNomeAutorItemAcervo,
+            this.colNumExempItemAcervo,
             this.colStatusItemAcervo});
             this.dtgDadosItemAcervo.Location = new System.Drawing.Point(16, 479);
             this.dtgDadosItemAcervo.Name = "dtgDadosItemAcervo";
@@ -381,6 +341,7 @@
             this.dtgDadosItemAcervo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDadosItemAcervo.Size = new System.Drawing.Size(923, 344);
             this.dtgDadosItemAcervo.TabIndex = 31;
+            this.dtgDadosItemAcervo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosItemAcervo_CellDoubleClick);
             // 
             // mvtBibAutorBindingSource
             // 
@@ -393,6 +354,42 @@
             // mvtBibEditoraBindingSource
             // 
             this.mvtBibEditoraBindingSource.DataMember = "mvtBibEditora";
+            // 
+            // cbxNomeAutor
+            // 
+            this.cbxNomeAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNomeAutor.FormattingEnabled = true;
+            this.cbxNomeAutor.Location = new System.Drawing.Point(150, 111);
+            this.cbxNomeAutor.Name = "cbxNomeAutor";
+            this.cbxNomeAutor.Size = new System.Drawing.Size(296, 28);
+            this.cbxNomeAutor.TabIndex = 32;
+            // 
+            // cbxNomeLocal
+            // 
+            this.cbxNomeLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNomeLocal.FormattingEnabled = true;
+            this.cbxNomeLocal.Location = new System.Drawing.Point(150, 79);
+            this.cbxNomeLocal.Name = "cbxNomeLocal";
+            this.cbxNomeLocal.Size = new System.Drawing.Size(296, 28);
+            this.cbxNomeLocal.TabIndex = 33;
+            // 
+            // cbxNomeEditora
+            // 
+            this.cbxNomeEditora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNomeEditora.FormattingEnabled = true;
+            this.cbxNomeEditora.Location = new System.Drawing.Point(150, 143);
+            this.cbxNomeEditora.Name = "cbxNomeEditora";
+            this.cbxNomeEditora.Size = new System.Drawing.Size(296, 28);
+            this.cbxNomeEditora.TabIndex = 34;
+            // 
+            // cbxNomeSecao
+            // 
+            this.cbxNomeSecao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNomeSecao.FormattingEnabled = true;
+            this.cbxNomeSecao.Location = new System.Drawing.Point(150, 369);
+            this.cbxNomeSecao.Name = "cbxNomeSecao";
+            this.cbxNomeSecao.Size = new System.Drawing.Size(296, 28);
+            this.cbxNomeSecao.TabIndex = 35;
             // 
             // colCodItemAcervo
             // 
@@ -408,12 +405,12 @@
             this.colNomeItemAcervo.Name = "colNomeItemAcervo";
             this.colNomeItemAcervo.ReadOnly = true;
             // 
-            // colNomeAutorItemAcervo
+            // colNumExempItemAcervo
             // 
-            this.colNomeAutorItemAcervo.HeaderText = "Nome do Autor";
-            this.colNomeAutorItemAcervo.MinimumWidth = 8;
-            this.colNomeAutorItemAcervo.Name = "colNomeAutorItemAcervo";
-            this.colNomeAutorItemAcervo.ReadOnly = true;
+            this.colNumExempItemAcervo.HeaderText = "Número Exemplar";
+            this.colNumExempItemAcervo.MinimumWidth = 8;
+            this.colNumExempItemAcervo.Name = "colNumExempItemAcervo";
+            this.colNumExempItemAcervo.ReadOnly = true;
             // 
             // colStatusItemAcervo
             // 
@@ -428,20 +425,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 830);
+            this.Controls.Add(this.cbxNomeSecao);
+            this.Controls.Add(this.cbxNomeEditora);
+            this.Controls.Add(this.cbxNomeLocal);
+            this.Controls.Add(this.cbxNomeAutor);
             this.Controls.Add(this.dtgDadosItemAcervo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbxStatusAcervo);
-            this.Controls.Add(this.txtSecaoAcervo);
             this.Controls.Add(this.txtLocalizacaoAcervo);
             this.Controls.Add(this.txtAnoEdicaoAcervo);
             this.Controls.Add(this.txtVolumeAcervo);
             this.Controls.Add(this.txtNumExemplarAcervo);
             this.Controls.Add(this.cbxTipoItemAcervo);
             this.Controls.Add(this.txtNomeColecaoAcervo);
-            this.Controls.Add(this.txtNomeEditoraAcervo);
-            this.Controls.Add(this.txtNomeAutorAcervo);
-            this.Controls.Add(this.txtNomeLocalItemAcervo);
             this.Controls.Add(this.txtNomeItemAcervo);
             this.Controls.Add(this.txtCodItemAcervo);
             this.Controls.Add(this.lblStatusAcervo);
@@ -488,16 +485,12 @@
         private System.Windows.Forms.Label lblStatusAcervo;
         private System.Windows.Forms.TextBox txtCodItemAcervo;
         private System.Windows.Forms.TextBox txtNomeItemAcervo;
-        private System.Windows.Forms.TextBox txtNomeLocalItemAcervo;
-        private System.Windows.Forms.TextBox txtNomeAutorAcervo;
-        private System.Windows.Forms.TextBox txtNomeEditoraAcervo;
         private System.Windows.Forms.TextBox txtNomeColecaoAcervo;
         private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
         private System.Windows.Forms.TextBox txtNumExemplarAcervo;
         private System.Windows.Forms.TextBox txtVolumeAcervo;
         private System.Windows.Forms.TextBox txtAnoEdicaoAcervo;
         private System.Windows.Forms.TextBox txtLocalizacaoAcervo;
-        private System.Windows.Forms.TextBox txtSecaoAcervo;
         private System.Windows.Forms.ComboBox cbxStatusAcervo;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
@@ -507,9 +500,13 @@
         private System.Windows.Forms.BindingSource mvtBibAutorBindingSource1;
         private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource1;
         private System.Windows.Forms.BindingSource mvtBibEditoraBindingSource;
+        private System.Windows.Forms.ComboBox cbxNomeAutor;
+        private System.Windows.Forms.ComboBox cbxNomeLocal;
+        private System.Windows.Forms.ComboBox cbxNomeEditora;
+        private System.Windows.Forms.ComboBox cbxNomeSecao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodItemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeItemAcervo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeAutorItemAcervo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumExempItemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatusItemAcervo;
     }
 }

@@ -12,7 +12,7 @@ namespace CadastroItemDoAcervo
     public class AutorModel
     {
         [Key()]
-        public string CodAutor { get; set; }
+        public int CodAutor { get; set; }
 
         public string NomeAutor { get; set; }
     }

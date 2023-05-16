@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,12 +23,172 @@ namespace CadastroItemDoAcervo
         {
             CarregaID();
             InitializeTable();
+            carregaCombobox();
+            limparForm();
+        }
+
+        public void carregaCombobox()
+        {
+            using (SqlConnection connection = DaoConnection.GetConexao())
+            {
+                SqlCommand cmd1 = new SqlCommand("SELECT codAutor, nomeAutor FROM mvtBibAutor", connection);
+                SqlCommand cmd2 = new SqlCommand("SELECT codEditora, nomeEditora FROM mvtBibEditora", connection);
+                SqlCommand cmd3 = new SqlCommand("SELECT codLocal, descricaoLocal FROM mvtBibLocal", connection);
+                SqlCommand cmd4 = new SqlCommand("SELECT codSecao, descricaoSecao FROM mvtBibSecao", connection);
+                SqlDataReader reader1 = cmd1.ExecuteReader();
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+                SqlDataReader reader3 = cmd3.ExecuteReader();
+                SqlDataReader reader4 = cmd4.ExecuteReader();
+                List<AutorModel> autores = new List<AutorModel>();
+                List<EditoraModel> editoras = new List<EditoraModel>();
+                List<LocalModel> locais = new List<LocalModel>();
+                List<SecaoModel> secoes = new List<SecaoModel>();
+
+                while (reader1.Read())
+                {
+                    AutorModel autor = new AutorModel()
+                    {
+                        CodAutor = reader1.GetInt32(0),
+                        NomeAutor = reader1.GetString(1)
+                    };
+                    autores.Add(autor);
+
+                }
+                while (reader2.Read())
+                {
+                    EditoraModel editora = new EditoraModel()
+                    {
+                        CodEditora = reader2.GetInt32(0),
+                        NomeEditora = reader2.GetString(1)
+                    };
+                    editoras.Add(editora);
+                }
+                while (reader3.Read())
+                {
+                    LocalModel local = new LocalModel()
+                    {
+                        CodLocal = reader3.GetInt32(0),
+                        DescricaoLocal = reader3.GetString(1)
+                    };
+                    locais.Add(local);
+                }
+                while (reader4.Read())
+                {
+                    SecaoModel secao = new SecaoModel()
+                    {
+                        CodSecao = reader4.GetInt32(0),
+                        DescricaoSecao = reader4.GetString(1)
+                    };
+                    secoes.Add(secao);
+                }
+
+                cbxNomeAutor.DataSource = autores;
+                cbxNomeAutor.DisplayMember = "nomeAutor";
+                cbxNomeAutor.ValueMember = "codAutor";
+                //cbxNomeAutor.SelectedIndex = -1;
+
+                cbxNomeEditora.DataSource = editoras;
+                cbxNomeEditora.DisplayMember = "nomeEditora";
+                cbxNomeEditora.ValueMember = "codEditora";
+                //cbxNomeEditora.SelectedIndex = -1;
+
+                cbxNomeLocal.DataSource = locais;
+                cbxNomeLocal.DisplayMember = "descricaoLocal";
+                cbxNomeLocal.ValueMember = "codLocal";
+                //cbxNomeLocal.SelectedIndex = -1;
+
+                cbxNomeSecao.DataSource = secoes;
+                cbxNomeSecao.DisplayMember = "descricaoSecao";
+                cbxNomeSecao.ValueMember = "codSecao";
+                //cbxNomeSecao.SelectedIndex = -1;
+            }
+
         }
 
         //Botão com a funcionalidade de salvar/persistir os dados inseridos no banco de dados.
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (SqlConnection connection = DaoConnection.GetConexao())
+                {
+                    ItemAcervoDAO dao = new ItemAcervoDAO(connection);
 
+                    bool verificaCampos = dao.VerificaCampos(new ItemAcervoModel()
+                    {
+                        NumExemplar = txtNumExemplarAcervo.Text,
+                        Nome = txtNomeItemAcervo.Text,
+                        TipoItem = cbxTipoItemAcervo.Text
+                    }, new AutorModel()
+                    {
+                        NomeAutor = cbxNomeAutor.Text
+                    }, new EditoraModel()
+                    {
+                        NomeEditora = cbxNomeEditora.Text
+                    }, new LocalModel()
+                    {
+                        DescricaoLocal = cbxNomeLocal.Text
+                    });
+
+                    int codAutor = dao.GetCodAutor(new AutorModel()
+                    {
+                        NomeAutor = cbxNomeAutor.Text
+                    });
+
+                    int codEditora = dao.GetCodEditora(new EditoraModel()
+                    {
+                        NomeEditora = cbxNomeEditora.Text
+                    });
+
+                    int codLocal = dao.GetCodLocal(new LocalModel()
+                    {
+                        DescricaoLocal = cbxNomeLocal.Text
+                    });
+
+                    int codSecao = dao.GetCodSecao(new SecaoModel()
+                    {
+                        DescricaoSecao = cbxNomeSecao.Text
+                    });
+
+                    dao.Salvar(new ItemAcervoModel()
+                    {
+                        NumExemplar = txtNumExemplarAcervo.Text,
+                        Nome = txtNomeItemAcervo.Text,
+                        TipoItem = cbxTipoItemAcervo.Text,
+                        Volume = txtVolumeAcervo.Text,
+                        AnoEdicao = txtAnoEdicaoAcervo.Text,
+                        Localizacao = txtLocalizacaoAcervo.Text,
+                        NomeColecao = txtNomeColecaoAcervo.Text,
+                        StatusItem = cbxStatusAcervo.Text
+
+                    }, new AutorModel()
+                    {
+                        CodAutor = codAutor,
+                        NomeAutor = cbxNomeAutor.Text
+                    }, new EditoraModel()
+                    {
+                        CodEditora = codEditora,
+                        NomeEditora = cbxNomeEditora.Text
+                    }, new LocalModel()
+                    {
+                        CodLocal = codLocal,
+                        DescricaoLocal = cbxNomeLocal.Text
+                    }, new SecaoModel()
+                    {
+                        CodSecao = codSecao,
+                        DescricaoSecao = cbxNomeSecao.Text
+                    });
+                    MessageBox.Show("leitor salva com sucesso!");
+                    limparForm();
+                    InitializeTable();
+                    CarregaID();
+                    btnExcluir.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Houve um problema ao salvar o leitor!\n{ex.Message}");
+            }
         }
 
         //Botão que realiza o Delete de um registro no banco de dados.
@@ -50,8 +211,7 @@ namespace CadastroItemDoAcervo
                         ItemAcervoDAO dao = new ItemAcervoDAO(connection);
                         dao.Excluir(new ItemAcervoModel()
                         {
-                            CodItem = txtCodItemAcervo.Text,
-                            CodAutor = txtNomeAutorAcervo.Text
+                            CodItem = txtCodItemAcervo.Text
                         });
                     }
                     MessageBox.Show("Item do acervo excluído com sucesso!");
@@ -72,22 +232,22 @@ namespace CadastroItemDoAcervo
         {
             txtCodItemAcervo.Text = String.Empty;
             txtNomeItemAcervo.Text = String.Empty;
-            txtNomeLocalItemAcervo.Text = String.Empty;
-            txtNomeAutorAcervo.Text = String.Empty;
-            txtNomeEditoraAcervo.Text = String.Empty;
+            cbxNomeLocal.SelectedIndex = -1;
+            cbxNomeAutor.SelectedIndex = -1;
+            cbxNomeEditora.SelectedIndex = -1;
             txtNomeColecaoAcervo.Text = String.Empty;
             cbxTipoItemAcervo.Text = String.Empty;
             txtNumExemplarAcervo.Text = String.Empty;
             txtVolumeAcervo.Text = String.Empty;
             txtAnoEdicaoAcervo.Text = String.Empty;
             txtLocalizacaoAcervo.Text = String.Empty;
-            txtSecaoAcervo.Text = String.Empty;
+            cbxNomeSecao.SelectedIndex = -1;
             cbxStatusAcervo.Text = String.Empty;
         }
 
         private void InitializeTable()
         {
-            /*dtgDadosItemAcervo.Rows.Clear();
+            dtgDadosItemAcervo.Rows.Clear();
             using (SqlConnection connection = DaoConnection.GetConexao())
             {
                 ItemAcervoDAO dao = new ItemAcervoDAO(connection);
@@ -95,23 +255,12 @@ namespace CadastroItemDoAcervo
                 foreach (ItemAcervoModel itemAcervo in itensAcervos)
                 {
                     DataGridViewRow row = dtgDadosItemAcervo.Rows[dtgDadosItemAcervo.Rows.Add()];
-                    row.Cells[colCodigoLeitor.Index].Value = leitor.CodLeitor;
-                    row.Cells[colNomeLeitor.Index].Value = leitor.NomeLeitor;
-                    row.Cells[colCpfLeitor.Index].Value = leitor.Cpf;
-                    row.Cells[colSexoLeitor.Index].Value = leitor.Sexo;
-                    row.Cells[colDtNascimentoLeitor.Index].Value = leitor.DataNascimento;
-                    row.Cells[colRgLeitor.Index].Value = leitor.Rg;
-                    row.Cells[colEmailLeitor.Index].Value = leitor.Email;
-                    row.Cells[colTelefoneLeitor.Index].Value = leitor.Telefone;
-                    row.Cells[colCelularLeitor.Index].Value = leitor.TelefoneCelular;
-                    row.Cells[colEnderecoLeitor.Index].Value = leitor.Endereco;
-                    row.Cells[colBairroLeitor.Index].Value = leitor.EnderecoBairro;
-                    row.Cells[colCidadeLeitor.Index].Value = leitor.EnderecoCidade;
-                    row.Cells[colCepLeitor.Index].Value = leitor.EnderecoCep;
-                    row.Cells[colUfLeitor.Index].Value = leitor.EnderecoUf;
-                    row.Cells[colNumeroLeitor.Index].Value = leitor.EnderecoNumero;
+                    row.Cells[colCodItemAcervo.Index].Value = itemAcervo.CodItem;
+                    row.Cells[colNomeItemAcervo.Index].Value = itemAcervo.Nome;
+                    row.Cells[colNumExempItemAcervo.Index].Value = itemAcervo.NumExemplar;
+                    row.Cells[colStatusItemAcervo.Index].Value = itemAcervo.StatusItem;
                 }
-            }*/
+            }
         }
 
         //Recupera o próximo id a ser cadastrado e joga ele para o textBox.
@@ -123,6 +272,26 @@ namespace CadastroItemDoAcervo
                 int nextCod = Convert.ToInt32(command.ExecuteScalar());
 
                 txtCodItemAcervo.Text = nextCod.ToString();
+            }
+        }
+
+        private void dtgDadosItemAcervo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                txtCodItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colCodItemAcervo.Index].Value + "";
+                txtNomeItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeItemAcervo.Index].Value + "";
+                txtNumExemplarAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNumExempItemAcervo.Index].Value + "";
+                cbxStatusAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colStatusItemAcervo.Index].Value + "";
+                if (string.IsNullOrEmpty(this.txtNomeItemAcervo.Text))
+                {
+                    btnExcluir.Enabled = false;
+                    CarregaID();
+                }
+                else
+                {
+                    btnExcluir.Enabled = true;
+                }
             }
         }
     }

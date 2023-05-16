@@ -27,7 +27,9 @@ namespace CadastroItemDoAcervo
 
         public string Localizacao { get; set; }
 
-        public string Idioma { get; set; }
+        public string NomeColecao { get; set; }
+
+        public string StatusItem { get; set; }
 
         [ForeignKey("mvtBibAutor")]
         [Column("codAutor")]
