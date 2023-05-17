@@ -25,6 +25,7 @@ namespace CadastroItemDoAcervo
             carregaCombobox();
             limparForm();
             CarregaID();
+            btnExcluir.Enabled = false;
         }
 
         public void carregaCombobox()
