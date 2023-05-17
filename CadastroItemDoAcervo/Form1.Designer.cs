@@ -97,10 +97,8 @@
             // 
             // lblNomeAcervo
             // 
-            this.lblNomeAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeAcervo.AutoSize = true;
-            this.lblNomeAcervo.Location = new System.Drawing.Point(308, 35);
+            this.lblNomeAcervo.Location = new System.Drawing.Point(305, 35);
             this.lblNomeAcervo.Name = "lblNomeAcervo";
             this.lblNomeAcervo.Size = new System.Drawing.Size(55, 20);
             this.lblNomeAcervo.TabIndex = 2;
@@ -108,8 +106,6 @@
             // 
             // lblNomeLocalAcervo
             // 
-            this.lblNomeLocalAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeLocalAcervo.AutoSize = true;
             this.lblNomeLocalAcervo.Location = new System.Drawing.Point(305, 136);
             this.lblNomeLocalAcervo.Name = "lblNomeLocalAcervo";
@@ -119,8 +115,6 @@
             // 
             // lblNomeAutorAcervo
             // 
-            this.lblNomeAutorAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeAutorAcervo.AutoSize = true;
             this.lblNomeAutorAcervo.Location = new System.Drawing.Point(305, 68);
             this.lblNomeAutorAcervo.Name = "lblNomeAutorAcervo";
@@ -130,8 +124,6 @@
             // 
             // lblNomeEditoraAcervo
             // 
-            this.lblNomeEditoraAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeEditoraAcervo.AutoSize = true;
             this.lblNomeEditoraAcervo.Location = new System.Drawing.Point(305, 102);
             this.lblNomeEditoraAcervo.Name = "lblNomeEditoraAcervo";
@@ -141,10 +133,8 @@
             // 
             // lblNomeColecaoAcervo
             // 
-            this.lblNomeColecaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeColecaoAcervo.AutoSize = true;
-            this.lblNomeColecaoAcervo.Location = new System.Drawing.Point(308, 173);
+            this.lblNomeColecaoAcervo.Location = new System.Drawing.Point(305, 169);
             this.lblNomeColecaoAcervo.Name = "lblNomeColecaoAcervo";
             this.lblNomeColecaoAcervo.Size = new System.Drawing.Size(117, 20);
             this.lblNomeColecaoAcervo.TabIndex = 6;
@@ -191,7 +181,7 @@
             this.lblLocalizacaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLocalizacaoAcervo.AutoSize = true;
-            this.lblLocalizacaoAcervo.Location = new System.Drawing.Point(533, 205);
+            this.lblLocalizacaoAcervo.Location = new System.Drawing.Point(587, 203);
             this.lblLocalizacaoAcervo.Name = "lblLocalizacaoAcervo";
             this.lblLocalizacaoAcervo.Size = new System.Drawing.Size(97, 20);
             this.lblLocalizacaoAcervo.TabIndex = 11;
@@ -199,10 +189,8 @@
             // 
             // lblSecaoAcervo
             // 
-            this.lblSecaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSecaoAcervo.AutoSize = true;
-            this.lblSecaoAcervo.Location = new System.Drawing.Point(308, 201);
+            this.lblSecaoAcervo.Location = new System.Drawing.Point(305, 201);
             this.lblSecaoAcervo.Name = "lblSecaoAcervo";
             this.lblSecaoAcervo.Size = new System.Drawing.Size(59, 20);
             this.lblSecaoAcervo.TabIndex = 12;
@@ -219,8 +207,6 @@
             // 
             // txtCodItemAcervo
             // 
-            this.txtCodItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodItemAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodItemAcervo.Enabled = false;
             this.txtCodItemAcervo.Location = new System.Drawing.Point(128, 33);
@@ -252,8 +238,6 @@
             // 
             // cbxTipoItemAcervo
             // 
-            this.cbxTipoItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxTipoItemAcervo.DisplayMember = "adaad";
             this.cbxTipoItemAcervo.FormattingEnabled = true;
             this.cbxTipoItemAcervo.Items.AddRange(new object[] {
@@ -271,8 +255,6 @@
             // 
             // txtNumExemplarAcervo
             // 
-            this.txtNumExemplarAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumExemplarAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumExemplarAcervo.Location = new System.Drawing.Point(128, 65);
             this.txtNumExemplarAcervo.MaxLength = 3;
@@ -282,8 +264,6 @@
             // 
             // txtVolumeAcervo
             // 
-            this.txtVolumeAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVolumeAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVolumeAcervo.Location = new System.Drawing.Point(128, 97);
             this.txtVolumeAcervo.MaxLength = 3;
@@ -293,8 +273,6 @@
             // 
             // txtAnoEdicaoAcervo
             // 
-            this.txtAnoEdicaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAnoEdicaoAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAnoEdicaoAcervo.Location = new System.Drawing.Point(128, 129);
             this.txtAnoEdicaoAcervo.MaxLength = 4;
@@ -307,16 +285,14 @@
             this.txtLocalizacaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocalizacaoAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLocalizacaoAcervo.Location = new System.Drawing.Point(636, 199);
+            this.txtLocalizacaoAcervo.Location = new System.Drawing.Point(690, 201);
             this.txtLocalizacaoAcervo.MaxLength = 50;
             this.txtLocalizacaoAcervo.Name = "txtLocalizacaoAcervo";
-            this.txtLocalizacaoAcervo.Size = new System.Drawing.Size(568, 26);
+            this.txtLocalizacaoAcervo.Size = new System.Drawing.Size(514, 26);
             this.txtLocalizacaoAcervo.TabIndex = 13;
             // 
             // cbxStatusAcervo
             // 
-            this.cbxStatusAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxStatusAcervo.FormattingEnabled = true;
             this.cbxStatusAcervo.Items.AddRange(new object[] {
             "Disponível",
@@ -535,13 +511,12 @@
             // 
             // cbxNomeSecao
             // 
-            this.cbxNomeSecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxNomeSecao.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbxNomeSecao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNomeSecao.FormattingEnabled = true;
             this.cbxNomeSecao.Location = new System.Drawing.Point(431, 199);
             this.cbxNomeSecao.Name = "cbxNomeSecao";
-            this.cbxNomeSecao.Size = new System.Drawing.Size(96, 28);
+            this.cbxNomeSecao.Size = new System.Drawing.Size(150, 28);
             this.cbxNomeSecao.TabIndex = 12;
             // 
             // gpxInsertDadosItemAcervo
@@ -622,7 +597,6 @@
         private System.Windows.Forms.Label lblSecaoAcervo;
         private System.Windows.Forms.Label lblStatusAcervo;
         private System.Windows.Forms.TextBox txtCodItemAcervo;
-        private System.Windows.Forms.TextBox txtNomeItemAcervo;
         private System.Windows.Forms.TextBox txtNomeColecaoAcervo;
         private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
         private System.Windows.Forms.TextBox txtNumExemplarAcervo;
@@ -656,6 +630,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocItemAcervo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeSecaoItemAcervo;
         private System.Windows.Forms.GroupBox gpxInsertDadosItemAcervo;
+        private System.Windows.Forms.TextBox txtNomeItemAcervo;
     }
 }
 
