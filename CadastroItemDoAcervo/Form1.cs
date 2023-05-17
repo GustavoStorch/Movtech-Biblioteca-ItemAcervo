@@ -21,10 +21,10 @@ namespace CadastroItemDoAcervo
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            CarregaID();
             InitializeTable();
             carregaCombobox();
             limparForm();
+            CarregaID();
         }
 
         public void carregaCombobox()
@@ -301,6 +301,45 @@ namespace CadastroItemDoAcervo
                     row.Cells[colNomeItemAcervo.Index].Value = itemAcervo.Nome;
                     row.Cells[colNumExempItemAcervo.Index].Value = itemAcervo.NumExemplar;
                     row.Cells[colStatusItemAcervo.Index].Value = itemAcervo.StatusItem;
+                    row.Cells[colNomeColecaoitemAcervo.Index].Value = itemAcervo.NomeColecao;
+                    row.Cells[colTipoItemAcervo.Index].Value = itemAcervo.TipoItem;
+                    row.Cells[colVolumeItemAcervo.Index].Value = itemAcervo.Volume;
+                    row.Cells[colAnoEdicaoItemAcervo.Index].Value = itemAcervo.AnoEdicao;
+                    row.Cells[colLocItemAcervo.Index].Value = itemAcervo.Localizacao;
+                    row.Cells[colNomeAutorItemAcervo.Index].Value = itemAcervo.AutorModel.NomeAutor;
+                    row.Cells[colNomeLocalItemAcervo.Index].Value = itemAcervo.LocalModel.DescricaoLocal;
+                    row.Cells[colNomeEditItemAcervo.Index].Value = itemAcervo.EditoraModel.NomeEditora;
+                    row.Cells[colNomeSecaoItemAcervo.Index].Value = itemAcervo.SecaoModel.DescricaoSecao;
+                }
+            }
+        }
+
+        private void dtgDadosItemAcervo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                txtCodItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colCodItemAcervo.Index].Value + "";
+                txtNomeItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeItemAcervo.Index].Value + "";
+                txtNumExemplarAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNumExempItemAcervo.Index].Value + "";
+                cbxStatusAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colStatusItemAcervo.Index].Value + "";
+                txtNomeColecaoAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeColecaoitemAcervo.Index].Value + "";
+                cbxTipoItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colTipoItemAcervo.Index].Value + "";
+                txtVolumeAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colVolumeItemAcervo.Index].Value + "";
+                txtAnoEdicaoAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colAnoEdicaoItemAcervo.Index].Value + "";
+                txtLocalizacaoAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colLocItemAcervo.Index].Value + "";
+                cbxNomeAutor.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeAutorItemAcervo.Index].Value + "";
+                cbxNomeLocal.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeLocalItemAcervo.Index].Value + "";
+                cbxNomeEditora.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeEditItemAcervo.Index].Value + "";
+                cbxNomeSecao.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeSecaoItemAcervo.Index].Value + "";
+
+                if (string.IsNullOrEmpty(this.txtNomeItemAcervo.Text))
+                {
+                    btnExcluir.Enabled = false;
+                    CarregaID();
+                }
+                else
+                {
+                    btnExcluir.Enabled = true;
                 }
             }
         }
@@ -314,26 +353,6 @@ namespace CadastroItemDoAcervo
                 int nextCod = Convert.ToInt32(command.ExecuteScalar());
 
                 txtCodItemAcervo.Text = nextCod.ToString();
-            }
-        }
-
-        private void dtgDadosItemAcervo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1 && e.ColumnIndex > -1)
-            {
-                txtCodItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colCodItemAcervo.Index].Value + "";
-                txtNomeItemAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeItemAcervo.Index].Value + "";
-                txtNumExemplarAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNumExempItemAcervo.Index].Value + "";
-                cbxStatusAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colStatusItemAcervo.Index].Value + "";
-                if (string.IsNullOrEmpty(this.txtNomeItemAcervo.Text))
-                {
-                    btnExcluir.Enabled = false;
-                    CarregaID();
-                }
-                else
-                {
-                    btnExcluir.Enabled = true;
-                }
             }
         }
     }

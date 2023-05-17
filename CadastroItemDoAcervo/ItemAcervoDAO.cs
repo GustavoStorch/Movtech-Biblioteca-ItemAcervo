@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -179,10 +180,11 @@ namespace CadastroItemDoAcervo
                     int codAutor = Convert.ToInt32(command.ExecuteScalar());
                     return codAutor;
                 }
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw ex;
-            }         
+            }
         }
 
         public int GetCodEditora(EditoraModel editora)
@@ -198,10 +200,11 @@ namespace CadastroItemDoAcervo
                     int codEditora = Convert.ToInt32(command.ExecuteScalar());
                     return codEditora;
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
 
         public int GetCodSecao(SecaoModel secao)
@@ -217,10 +220,11 @@ namespace CadastroItemDoAcervo
                     int codSecao = Convert.ToInt32(command.ExecuteScalar());
                     return codSecao;
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw ex;
-            }          
+            }
         }
 
         public int GetCodLocal(LocalModel local)
@@ -236,7 +240,8 @@ namespace CadastroItemDoAcervo
                     int codLocal = Convert.ToInt32(command.ExecuteScalar());
                     return codLocal;
                 }
-            } catch (Exception ex )
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -267,16 +272,16 @@ namespace CadastroItemDoAcervo
             string codItem = "";
             string numExemplar = "";
             string nome = "";
-            string nomeAutor = "";//help
-            string nomeEditora = "";//help
             string tipoItem = "";
-            string nomeLocal = "";//help
             string volume = "";
             string anoEdicao = "";
             string localizacao = "";
-            string secao = "";//help
             string nomeColecao = "";
             string statusItem = "";
+            AutorModel nomeAutor = null;
+            EditoraModel nomeEditora = null;
+            SecaoModel nomeSecao = null;
+            LocalModel nomeLocal = null;
 
             if (DBNull.Value != dr["codItem"])
             {
@@ -290,21 +295,9 @@ namespace CadastroItemDoAcervo
             {
                 nome = dr["nome"] + "";
             }
-            if (DBNull.Value != dr["nomeAutor"])
-            {
-                nomeAutor = dr["nomeAutor"] + "";
-            }
-            if (DBNull.Value != dr["nomeEditora"])
-            {
-                nomeEditora = dr["nomeEditora"] + "";
-            }
             if (DBNull.Value != dr["tipoItem"])
             {
                 tipoItem = dr["tipoItem"] + "";
-            }
-            if (DBNull.Value != dr["nomeLocal"])
-            {
-                nomeLocal = dr["nomeLocal"] + "";
             }
             if (DBNull.Value != dr["volume"])
             {
@@ -318,10 +311,6 @@ namespace CadastroItemDoAcervo
             {
                 localizacao = dr["localizacao"] + "";
             }
-            if (DBNull.Value != dr["secao"])
-            {
-                secao = dr["secao"] + "";
-            }
             if (DBNull.Value != dr["nomeColecao"])
             {
                 nomeColecao = dr["nomeColecao"] + "";
@@ -329,6 +318,38 @@ namespace CadastroItemDoAcervo
             if (DBNull.Value != dr["statusItem"])
             {
                 statusItem = dr["statusItem"] + "";
+            }
+            if (DBNull.Value != dr["nomeAutor"])
+            {
+                string autor = dr["nomeAutor"] + "";
+                nomeAutor = new AutorModel()
+                {
+                    NomeAutor = autor
+                };
+            }
+            if (DBNull.Value != dr["nomeEditora"])
+            {
+                string editora = dr["nomeEditora"] + "";
+                nomeEditora = new EditoraModel()
+                {
+                    NomeEditora = editora
+                };
+            }
+            if (DBNull.Value != dr["nomeLocal"])
+            {
+                string local = dr["nomeLocal"] + "";
+                nomeLocal = new LocalModel()
+                {
+                    DescricaoLocal = local
+                };
+            }
+            if (DBNull.Value != dr["secao"])
+            {
+                string secao = dr["secao"] + "";
+                nomeSecao = new SecaoModel()
+                {
+                    DescricaoSecao = secao
+                };
             }
             return new ItemAcervoModel()
             {
@@ -341,11 +362,10 @@ namespace CadastroItemDoAcervo
                 Localizacao = localizacao,
                 NomeColecao = nomeColecao,
                 StatusItem = statusItem,
-
-                //NomeAutor = nomeAutor,
-                //NomeEditora = nomeEditora,
-                //DescricaoLocal = nomeLocal,
-                //DescricaoSecao = secao,
+                AutorModel = nomeAutor,
+                EditoraModel = nomeEditora,
+                SecaoModel = nomeSecao,
+                LocalModel = nomeLocal
             };
         }
     }
