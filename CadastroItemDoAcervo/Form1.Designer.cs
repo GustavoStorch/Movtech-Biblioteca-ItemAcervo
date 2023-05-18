@@ -77,6 +77,7 @@
             this.cbxNomeEditora = new System.Windows.Forms.ComboBox();
             this.cbxNomeSecao = new System.Windows.Forms.ComboBox();
             this.gpxInsertDadosItemAcervo = new System.Windows.Forms.GroupBox();
+            this.txtTeste = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosItemAcervo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).BeginInit();
@@ -557,12 +558,24 @@
             this.gpxInsertDadosItemAcervo.TabStop = false;
             this.gpxInsertDadosItemAcervo.Text = "Dados do Item";
             // 
+            // txtTeste
+            // 
+            this.txtTeste.AutoCompleteCustomSource.AddRange(new string[] {
+            ""});
+            this.txtTeste.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtTeste.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtTeste.Location = new System.Drawing.Point(310, 254);
+            this.txtTeste.Name = "txtTeste";
+            this.txtTeste.Size = new System.Drawing.Size(158, 26);
+            this.txtTeste.TabIndex = 37;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 685);
+            this.Controls.Add(this.txtTeste);
             this.Controls.Add(this.gpxInsertDadosItemAcervo);
             this.Controls.Add(this.dtgDadosItemAcervo);
             this.Controls.Add(this.btnExcluir);
@@ -580,6 +593,7 @@
             this.gpxInsertDadosItemAcervo.ResumeLayout(false);
             this.gpxInsertDadosItemAcervo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -632,6 +646,7 @@
         private System.Windows.Forms.GroupBox gpxInsertDadosItemAcervo;
         private System.Windows.Forms.TextBox txtNomeItemAcervo;
         private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
+        private System.Windows.Forms.TextBox txtTeste;
     }
 }
 

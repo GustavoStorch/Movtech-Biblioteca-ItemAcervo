@@ -26,7 +26,7 @@ namespace CadastroItemDoAcervo
             carregaCombobox();
             limparForm();
             CarregaID();
-            btnExcluir.Enabled = false;        
+            btnExcluir.Enabled = false;
         }
 
         public void carregaCombobox()
@@ -357,5 +357,36 @@ namespace CadastroItemDoAcervo
                 txtCodItemAcervo.Text = nextCod.ToString();
             }
         }
+
+        /*private void txtTeste_TextChanged(object sender, EventArgs e)
+        {
+            string textoDigitado = txtTeste.Text;
+
+            try
+            {
+                using (SqlConnection connection = DaoConnection.GetConexao())
+                {
+                    SqlCommand command = new SqlCommand("SELECT nomeAutor FROM mvtBibAutor WHERE nomeAutor LIKE @nomeAutor", connection);
+                    command.Parameters.AddWithValue("@nomeAutor", "%" + textoDigitado + "%");
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        AutoCompleteStringCollection sugestoes = new AutoCompleteStringCollection();
+                        
+                        while (reader.Read())
+                        {
+                            string nomeAutor = reader["nomeAutor"].ToString();
+                            sugestoes.Add(nomeAutor);
+                        }
+
+                        txtTeste.AutoCompleteCustomSource = sugestoes;
+                    }
+                }
+            } catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+        */
     }
 }
