@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CadastroItemDoAcervo
@@ -25,7 +26,7 @@ namespace CadastroItemDoAcervo
             carregaCombobox();
             limparForm();
             CarregaID();
-            btnExcluir.Enabled = false;
+            btnExcluir.Enabled = false;        
         }
 
         public void carregaCombobox()

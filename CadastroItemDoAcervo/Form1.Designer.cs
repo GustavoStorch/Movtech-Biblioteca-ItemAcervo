@@ -238,7 +238,7 @@
             // 
             // cbxTipoItemAcervo
             // 
-            this.cbxTipoItemAcervo.DisplayMember = "adaad";
+            this.cbxTipoItemAcervo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoItemAcervo.FormattingEnabled = true;
             this.cbxTipoItemAcervo.Items.AddRange(new object[] {
             "Artigo",
@@ -293,6 +293,7 @@
             // 
             // cbxStatusAcervo
             // 
+            this.cbxStatusAcervo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatusAcervo.FormattingEnabled = true;
             this.cbxStatusAcervo.Items.AddRange(new object[] {
             "Disponível",
@@ -598,7 +599,6 @@
         private System.Windows.Forms.Label lblStatusAcervo;
         private System.Windows.Forms.TextBox txtCodItemAcervo;
         private System.Windows.Forms.TextBox txtNomeColecaoAcervo;
-        private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
         private System.Windows.Forms.TextBox txtNumExemplarAcervo;
         private System.Windows.Forms.TextBox txtVolumeAcervo;
         private System.Windows.Forms.TextBox txtAnoEdicaoAcervo;
@@ -631,6 +631,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeSecaoItemAcervo;
         private System.Windows.Forms.GroupBox gpxInsertDadosItemAcervo;
         private System.Windows.Forms.TextBox txtNomeItemAcervo;
+        private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
     }
 }
 
