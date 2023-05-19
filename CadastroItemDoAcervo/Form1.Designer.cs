@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblCodAcervo = new System.Windows.Forms.Label();
             this.lblNomeAcervo = new System.Windows.Forms.Label();
             this.lblNomeLocalAcervo = new System.Windows.Forms.Label();
@@ -72,12 +73,11 @@
             this.mvtBibAutorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.treinamentoDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mvtBibEditoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbxNomeAutor = new System.Windows.Forms.ComboBox();
             this.cbxNomeLocal = new System.Windows.Forms.ComboBox();
             this.cbxNomeEditora = new System.Windows.Forms.ComboBox();
             this.cbxNomeSecao = new System.Windows.Forms.ComboBox();
             this.gpxInsertDadosItemAcervo = new System.Windows.Forms.GroupBox();
-            this.txtTeste = new System.Windows.Forms.TextBox();
+            this.txtNomeAutor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosItemAcervo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvtBibAutorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).BeginInit();
@@ -478,17 +478,6 @@
             // 
             this.mvtBibEditoraBindingSource.DataMember = "mvtBibEditora";
             // 
-            // cbxNomeAutor
-            // 
-            this.cbxNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxNomeAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNomeAutor.FormattingEnabled = true;
-            this.cbxNomeAutor.Location = new System.Drawing.Point(431, 65);
-            this.cbxNomeAutor.Name = "cbxNomeAutor";
-            this.cbxNomeAutor.Size = new System.Drawing.Size(773, 28);
-            this.cbxNomeAutor.TabIndex = 4;
-            // 
             // cbxNomeLocal
             // 
             this.cbxNomeLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -525,6 +514,7 @@
             // 
             this.gpxInsertDadosItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpxInsertDadosItemAcervo.Controls.Add(this.txtNomeAutor);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.lblCodAcervo);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.cbxNomeSecao);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.txtCodItemAcervo);
@@ -533,7 +523,6 @@
             this.gpxInsertDadosItemAcervo.Controls.Add(this.cbxStatusAcervo);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.lblLocalizacaoAcervo);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.lblNomeAcervo);
-            this.gpxInsertDadosItemAcervo.Controls.Add(this.cbxNomeAutor);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.lblStatusAcervo);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.cbxNomeLocal);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.txtNomeItemAcervo);
@@ -558,16 +547,18 @@
             this.gpxInsertDadosItemAcervo.TabStop = false;
             this.gpxInsertDadosItemAcervo.Text = "Dados do Item";
             // 
-            // txtTeste
+            // txtNomeAutor
             // 
-            this.txtTeste.AutoCompleteCustomSource.AddRange(new string[] {
+            this.txtNomeAutor.AutoCompleteCustomSource.AddRange(new string[] {
             ""});
-            this.txtTeste.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtTeste.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTeste.Location = new System.Drawing.Point(310, 254);
-            this.txtTeste.Name = "txtTeste";
-            this.txtTeste.Size = new System.Drawing.Size(158, 26);
-            this.txtTeste.TabIndex = 37;
+            this.txtNomeAutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtNomeAutor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtNomeAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeAutor.Location = new System.Drawing.Point(431, 66);
+            this.txtNomeAutor.Name = "txtNomeAutor";
+            this.txtNomeAutor.Size = new System.Drawing.Size(773, 26);
+            this.txtNomeAutor.TabIndex = 4;
+            this.txtNomeAutor.TextChanged += new System.EventHandler(this.txtTeste_TextChanged);
             // 
             // Form1
             // 
@@ -575,11 +566,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 685);
-            this.Controls.Add(this.txtTeste);
             this.Controls.Add(this.gpxInsertDadosItemAcervo);
             this.Controls.Add(this.dtgDadosItemAcervo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Item do Acervo";
@@ -593,7 +584,6 @@
             this.gpxInsertDadosItemAcervo.ResumeLayout(false);
             this.gpxInsertDadosItemAcervo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -626,7 +616,6 @@
         private System.Windows.Forms.BindingSource mvtBibAutorBindingSource1;
         private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource1;
         private System.Windows.Forms.BindingSource mvtBibEditoraBindingSource;
-        private System.Windows.Forms.ComboBox cbxNomeAutor;
         private System.Windows.Forms.ComboBox cbxNomeLocal;
         private System.Windows.Forms.ComboBox cbxNomeEditora;
         private System.Windows.Forms.ComboBox cbxNomeSecao;
@@ -646,7 +635,7 @@
         private System.Windows.Forms.GroupBox gpxInsertDadosItemAcervo;
         private System.Windows.Forms.TextBox txtNomeItemAcervo;
         private System.Windows.Forms.ComboBox cbxTipoItemAcervo;
-        private System.Windows.Forms.TextBox txtTeste;
+        private System.Windows.Forms.TextBox txtNomeAutor;
     }
 }
 

@@ -33,29 +33,16 @@ namespace CadastroItemDoAcervo
         {
             using (SqlConnection connection = DaoConnection.GetConexao())
             {
-                SqlCommand cmd1 = new SqlCommand("SELECT codAutor, nomeAutor FROM mvtBibAutor", connection);
                 SqlCommand cmd2 = new SqlCommand("SELECT codEditora, nomeEditora FROM mvtBibEditora", connection);
                 SqlCommand cmd3 = new SqlCommand("SELECT codLocal, descricaoLocal FROM mvtBibLocal", connection);
                 SqlCommand cmd4 = new SqlCommand("SELECT codSecao, descricaoSecao FROM mvtBibSecao", connection);
-                SqlDataReader reader1 = cmd1.ExecuteReader();
                 SqlDataReader reader2 = cmd2.ExecuteReader();
                 SqlDataReader reader3 = cmd3.ExecuteReader();
                 SqlDataReader reader4 = cmd4.ExecuteReader();
-                List<AutorModel> autores = new List<AutorModel>();
                 List<EditoraModel> editoras = new List<EditoraModel>();
                 List<LocalModel> locais = new List<LocalModel>();
                 List<SecaoModel> secoes = new List<SecaoModel>();
 
-                while (reader1.Read())
-                {
-                    AutorModel autor = new AutorModel()
-                    {
-                        CodAutor = reader1.GetInt32(0),
-                        NomeAutor = reader1.GetString(1)
-                    };
-                    autores.Add(autor);
-
-                }
                 while (reader2.Read())
                 {
                     EditoraModel editora = new EditoraModel()
@@ -83,10 +70,6 @@ namespace CadastroItemDoAcervo
                     };
                     secoes.Add(secao);
                 }
-
-                cbxNomeAutor.DataSource = autores;
-                cbxNomeAutor.DisplayMember = "nomeAutor";
-                cbxNomeAutor.ValueMember = "codAutor";
 
                 cbxNomeEditora.DataSource = editoras;
                 cbxNomeEditora.DisplayMember = "nomeEditora";
@@ -120,7 +103,8 @@ namespace CadastroItemDoAcervo
                         TipoItem = cbxTipoItemAcervo.Text
                     }, new AutorModel()
                     {
-                        NomeAutor = cbxNomeAutor.Text
+                        //NomeAutor = cbxNomeAutor.Text
+                        NomeAutor = txtNomeAutor.Text
                     }, new EditoraModel()
                     {
                         NomeEditora = cbxNomeEditora.Text
@@ -132,7 +116,8 @@ namespace CadastroItemDoAcervo
                     //busca o id do autor, editora, local e secao selecionados para salvar no banco de dados.
                     int codAutor = dao.GetCodAutor(new AutorModel()
                     {
-                        NomeAutor = cbxNomeAutor.Text
+                        //NomeAutor = cbxNomeAutor.Text
+                        NomeAutor = txtNomeAutor.Text
                     });
 
                     int codEditora = dao.GetCodEditora(new EditoraModel()
@@ -150,14 +135,14 @@ namespace CadastroItemDoAcervo
                         DescricaoSecao = cbxNomeSecao.Text
                     });
 
-                    if(verificaCampos)
+                    if (verificaCampos)
                     {
                         int count = dao.VerificaRegistros(new ItemAcervoModel()
                         {
                             CodItem = txtCodItemAcervo.Text
                         });
 
-                        if(count > 0)
+                        if (count > 0)
                         {
                             dao.Editar(new ItemAcervoModel()
                             {
@@ -173,7 +158,8 @@ namespace CadastroItemDoAcervo
                             }, new AutorModel()
                             {
                                 CodAutor = codAutor,
-                                NomeAutor = cbxNomeAutor.Text
+                                //NomeAutor = cbxNomeAutor.Text
+                                NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
                                 CodEditora = codEditora,
@@ -189,7 +175,7 @@ namespace CadastroItemDoAcervo
                             });
                             MessageBox.Show("Item do acervo atualizado com sucesso!");
                             limparForm();
-                        } 
+                        }
                         else
                         {
                             dao.Salvar(new ItemAcervoModel()
@@ -206,7 +192,8 @@ namespace CadastroItemDoAcervo
                             }, new AutorModel()
                             {
                                 CodAutor = codAutor,
-                                NomeAutor = cbxNomeAutor.Text
+                                //NomeAutor = cbxNomeAutor.Text
+                                NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
                                 CodEditora = codEditora,
@@ -277,16 +264,16 @@ namespace CadastroItemDoAcervo
             txtCodItemAcervo.Text = String.Empty;
             txtNomeItemAcervo.Text = String.Empty;
             cbxNomeLocal.SelectedIndex = -1;
-            cbxNomeAutor.SelectedIndex = -1;
+            txtNomeAutor.Text = String.Empty;
             cbxNomeEditora.SelectedIndex = -1;
             txtNomeColecaoAcervo.Text = String.Empty;
-            cbxTipoItemAcervo.Text = String.Empty;
+            cbxTipoItemAcervo.SelectedIndex = -1;
             txtNumExemplarAcervo.Text = String.Empty;
             txtVolumeAcervo.Text = String.Empty;
             txtAnoEdicaoAcervo.Text = String.Empty;
             txtLocalizacaoAcervo.Text = String.Empty;
             cbxNomeSecao.SelectedIndex = -1;
-            cbxStatusAcervo.Text = String.Empty;
+            cbxStatusAcervo.SelectedIndex = -1;
         }
 
         private void InitializeTable()
@@ -329,11 +316,10 @@ namespace CadastroItemDoAcervo
                 txtVolumeAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colVolumeItemAcervo.Index].Value + "";
                 txtAnoEdicaoAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colAnoEdicaoItemAcervo.Index].Value + "";
                 txtLocalizacaoAcervo.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colLocItemAcervo.Index].Value + "";
-                cbxNomeAutor.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeAutorItemAcervo.Index].Value + "";
                 cbxNomeLocal.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeLocalItemAcervo.Index].Value + "";
                 cbxNomeEditora.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeEditItemAcervo.Index].Value + "";
                 cbxNomeSecao.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeSecaoItemAcervo.Index].Value + "";
-
+                txtNomeAutor.Text = dtgDadosItemAcervo.Rows[e.RowIndex].Cells[colNomeAutorItemAcervo.Index].Value + "";
                 if (string.IsNullOrEmpty(this.txtNomeItemAcervo.Text))
                 {
                     btnExcluir.Enabled = false;
@@ -357,36 +343,35 @@ namespace CadastroItemDoAcervo
                 txtCodItemAcervo.Text = nextCod.ToString();
             }
         }
-
-        /*private void txtTeste_TextChanged(object sender, EventArgs e)
+        private void txtTeste_TextChanged(object sender, EventArgs e)
         {
-            string textoDigitado = txtTeste.Text;
-
             try
             {
-                using (SqlConnection connection = DaoConnection.GetConexao())
+                if (string.IsNullOrEmpty(txtNomeAutor.Text))
                 {
-                    SqlCommand command = new SqlCommand("SELECT nomeAutor FROM mvtBibAutor WHERE nomeAutor LIKE @nomeAutor", connection);
-                    command.Parameters.AddWithValue("@nomeAutor", "%" + textoDigitado + "%");
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        AutoCompleteStringCollection sugestoes = new AutoCompleteStringCollection();
-                        
-                        while (reader.Read())
-                        {
-                            string nomeAutor = reader["nomeAutor"].ToString();
-                            sugestoes.Add(nomeAutor);
-                        }
-
-                        txtTeste.AutoCompleteCustomSource = sugestoes;
-                    }
+                    return;
                 }
-            } catch(Exception ex)
-            {
-                throw ex;
+                else
+                {
+                    string textoDigitado = txtNomeAutor.Text;
+
+                    using (SqlConnection connection = DaoConnection.GetConexao())
+                    {
+                        ItemAcervoDAO dao = new ItemAcervoDAO(connection);
+                        List<string> autores = dao.GetAutores(new AutorModel 
+                        { 
+                            NomeAutor = textoDigitado 
+                        });
+
+                        txtNomeAutor.AutoCompleteCustomSource.Clear();
+                        txtNomeAutor.AutoCompleteCustomSource.AddRange(autores.ToArray());
+                    };
+                }           
             }
-            
-        */
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao buscar os autores: " + ex.Message);
+            }
+        }
     }
 }
