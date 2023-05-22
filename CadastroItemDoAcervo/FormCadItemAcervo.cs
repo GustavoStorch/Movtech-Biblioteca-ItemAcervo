@@ -44,6 +44,22 @@ namespace CadastroItemDoAcervo
             txtNomeEditora.Text = formBuscaEditora.nomeEditora;
         }
 
+        public void CarregaFormBuscaLocal()
+        {
+            FormBuscaLocal formBuscaLocal = new FormBuscaLocal();
+            formBuscaLocal.ShowDialog();
+
+            txtNomeLocal.Text = formBuscaLocal.nomeLocal;
+        }
+
+        public void CarregaFormBuscaSecao()
+        {
+            FormBuscaSecao formBuscaSecao = new FormBuscaSecao();
+            formBuscaSecao.ShowDialog();
+
+            txtNomeSecao.Text = formBuscaSecao.nomeSecao;
+        }
+
         //Botão com a funcionalidade de salvar/persistir os dados inseridos no banco de dados.
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -61,7 +77,6 @@ namespace CadastroItemDoAcervo
                         TipoItem = cbxTipoItemAcervo.Text
                     }, new AutorModel()
                     {
-                        //NomeAutor = cbxNomeAutor.Text
                         NomeAutor = txtNomeAutor.Text
                     }, new EditoraModel()
                     {
@@ -74,7 +89,6 @@ namespace CadastroItemDoAcervo
                     //busca o id do autor, editora, local e secao selecionados para salvar no banco de dados.
                     int codAutor = dao.GetCodAutor(new AutorModel()
                     {
-                        //NomeAutor = cbxNomeAutor.Text
                         NomeAutor = txtNomeAutor.Text
                     });
 
@@ -116,7 +130,6 @@ namespace CadastroItemDoAcervo
                             }, new AutorModel()
                             {
                                 //CodAutor = codAutor,
-                                //NomeAutor = cbxNomeAutor.Text
                                 NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
@@ -124,11 +137,11 @@ namespace CadastroItemDoAcervo
                                 NomeEditora = txtNomeEditora.Text
                             }, new LocalModel()
                             {
-                                CodLocal = codLocal,
+                                //CodLocal = codLocal,
                                 DescricaoLocal = txtNomeLocal.Text
                             }, new SecaoModel()
                             {
-                                CodSecao = codSecao,
+                                //CodSecao = codSecao,
                                 DescricaoSecao = txtNomeSecao.Text
                             });
                             MessageBox.Show("Item do acervo atualizado com sucesso!");
@@ -150,7 +163,6 @@ namespace CadastroItemDoAcervo
                             }, new AutorModel()
                             {
                                 //CodAutor = codAutor,
-                                //NomeAutor = cbxNomeAutor.Text
                                 NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
@@ -158,11 +170,11 @@ namespace CadastroItemDoAcervo
                                 NomeEditora = txtNomeEditora.Text
                             }, new LocalModel()
                             {
-                                CodLocal = codLocal,
+                                //CodLocal = codLocal,
                                 DescricaoLocal = txtNomeLocal.Text
                             }, new SecaoModel()
                             {
-                                CodSecao = codSecao,
+                                //CodSecao = codSecao,
                                 DescricaoSecao = txtNomeSecao.Text
                             });
                             MessageBox.Show("Item do acervo salvo com sucesso!");
@@ -254,7 +266,7 @@ namespace CadastroItemDoAcervo
                     row.Cells[colVolumeItemAcervo.Index].Value = itemAcervo.Volume;
                     row.Cells[colAnoEdicaoItemAcervo.Index].Value = itemAcervo.AnoEdicao;
                     row.Cells[colLocItemAcervo.Index].Value = itemAcervo.Localizacao;
-                    row.Cells[colNomeAutorItemAcervo.Index].Value = autor.NomeAutor;
+                    row.Cells[colNomeAutorItemAcervo.Index].Value = itemAcervo.AutorModel.NomeAutor;
                     row.Cells[colNomeLocalItemAcervo.Index].Value = itemAcervo.LocalModel.DescricaoLocal;
                     row.Cells[colNomeEditItemAcervo.Index].Value = itemAcervo.EditoraModel.NomeEditora;
                     row.Cells[colNomeSecaoItemAcervo.Index].Value = itemAcervo.SecaoModel.DescricaoSecao;
@@ -311,6 +323,16 @@ namespace CadastroItemDoAcervo
         private void btnBuscarEditora_Click(object sender, EventArgs e)
         {
             CarregaFormBuscaEditora();
+        }
+
+        private void btnBuscarLocal_Click(object sender, EventArgs e)
+        {
+            CarregaFormBuscaLocal();
+        }
+
+        private void btnBuscarSecao_Click(object sender, EventArgs e)
+        {
+            CarregaFormBuscaSecao();
         }
     }
 }

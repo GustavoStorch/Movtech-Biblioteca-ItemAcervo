@@ -28,83 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblCodLocal = new System.Windows.Forms.Label();
+            this.lblNomeLocal = new System.Windows.Forms.Label();
+            this.txtCodLocal = new System.Windows.Forms.TextBox();
+            this.txtNomeLocal = new System.Windows.Forms.TextBox();
+            this.btnSelecionarLocal = new System.Windows.Forms.Button();
+            this.dtgDadosLocal = new System.Windows.Forms.DataGridView();
+            this.colCodLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDadosLocal)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblCodLocal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblCodLocal.AutoSize = true;
+            this.lblCodLocal.Location = new System.Drawing.Point(12, 15);
+            this.lblCodLocal.Name = "lblCodLocal";
+            this.lblCodLocal.Size = new System.Drawing.Size(43, 13);
+            this.lblCodLocal.TabIndex = 0;
+            this.lblCodLocal.Text = "Código:";
             // 
-            // label2
+            // lblNomeLocal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblNomeLocal.AutoSize = true;
+            this.lblNomeLocal.Location = new System.Drawing.Point(12, 41);
+            this.lblNomeLocal.Name = "lblNomeLocal";
+            this.lblNomeLocal.Size = new System.Drawing.Size(36, 13);
+            this.lblNomeLocal.TabIndex = 1;
+            this.lblNomeLocal.Text = "Local:";
             // 
-            // textBox1
+            // txtCodLocal
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtCodLocal.Enabled = false;
+            this.txtCodLocal.Location = new System.Drawing.Point(61, 12);
+            this.txtCodLocal.MaxLength = 3;
+            this.txtCodLocal.Name = "txtCodLocal";
+            this.txtCodLocal.Size = new System.Drawing.Size(119, 20);
+            this.txtCodLocal.TabIndex = 2;
             // 
-            // textBox2
+            // txtNomeLocal
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtNomeLocal.Location = new System.Drawing.Point(61, 38);
+            this.txtNomeLocal.MaxLength = 50;
+            this.txtNomeLocal.Name = "txtNomeLocal";
+            this.txtNomeLocal.Size = new System.Drawing.Size(387, 20);
+            this.txtNomeLocal.TabIndex = 3;
             // 
-            // button1
+            // btnSelecionarLocal
             // 
-            this.button1.Location = new System.Drawing.Point(681, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSelecionarLocal.Location = new System.Drawing.Point(453, 37);
+            this.btnSelecionarLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelecionarLocal.Name = "btnSelecionarLocal";
+            this.btnSelecionarLocal.Size = new System.Drawing.Size(67, 21);
+            this.btnSelecionarLocal.TabIndex = 5;
+            this.btnSelecionarLocal.Text = "Selecionar";
+            this.btnSelecionarLocal.UseVisualStyleBackColor = true;
+            this.btnSelecionarLocal.Click += new System.EventHandler(this.btnSelecionarLocal_Click);
             // 
-            // dataGridView1
+            // dtgDadosLocal
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(143, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 5;
+            this.dtgDadosLocal.AllowUserToAddRows = false;
+            this.dtgDadosLocal.AllowUserToDeleteRows = false;
+            this.dtgDadosLocal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgDadosLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDadosLocal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodLocal,
+            this.colNomeLocal});
+            this.dtgDadosLocal.Location = new System.Drawing.Point(15, 64);
+            this.dtgDadosLocal.MultiSelect = false;
+            this.dtgDadosLocal.Name = "dtgDadosLocal";
+            this.dtgDadosLocal.ReadOnly = true;
+            this.dtgDadosLocal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgDadosLocal.Size = new System.Drawing.Size(505, 185);
+            this.dtgDadosLocal.TabIndex = 6;
+            this.dtgDadosLocal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosLocal_CellDoubleClick);
+            // 
+            // colCodLocal
+            // 
+            this.colCodLocal.FillWeight = 30F;
+            this.colCodLocal.HeaderText = "Código";
+            this.colCodLocal.Name = "colCodLocal";
+            this.colCodLocal.ReadOnly = true;
+            // 
+            // colNomeLocal
+            // 
+            this.colNomeLocal.HeaderText = "Nome Local";
+            this.colNomeLocal.Name = "colNomeLocal";
+            this.colNomeLocal.ReadOnly = true;
             // 
             // FormBuscaLocal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 401);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(531, 256);
+            this.Controls.Add(this.dtgDadosLocal);
+            this.Controls.Add(this.btnSelecionarLocal);
+            this.Controls.Add(this.txtNomeLocal);
+            this.Controls.Add(this.txtCodLocal);
+            this.Controls.Add(this.lblNomeLocal);
+            this.Controls.Add(this.lblCodLocal);
             this.Name = "FormBuscaLocal";
-            this.Text = "Busca Local";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormBuscaLocal";
+            this.Load += new System.EventHandler(this.FormBuscaLocal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDadosLocal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,11 +139,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblCodLocal;
+        private System.Windows.Forms.Label lblNomeLocal;
+        private System.Windows.Forms.TextBox txtCodLocal;
+        private System.Windows.Forms.TextBox txtNomeLocal;
+        private System.Windows.Forms.Button btnSelecionarLocal;
+        private System.Windows.Forms.DataGridView dtgDadosLocal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodLocal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeLocal;
     }
 }

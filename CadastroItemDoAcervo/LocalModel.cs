@@ -12,7 +12,7 @@ namespace CadastroItemDoAcervo
     public class LocalModel
     {
         [Key()]
-        public int CodLocal { get; set; }
+        public string CodLocal { get; set; }
 
         public string DescricaoLocal { get; set; }
     }

@@ -18,7 +18,7 @@ namespace CadastroItemDoAcervo
 
         public List<EditoraModel> GetEditoras()
         {
-            List<EditoraModel> autores = new List<EditoraModel>();
+            List<EditoraModel> editoras = new List<EditoraModel>();
             using (SqlCommand command = Connection.CreateCommand())
             {
                 StringBuilder sql = new StringBuilder();
@@ -28,11 +28,11 @@ namespace CadastroItemDoAcervo
                 {
                     while (dr.Read())
                     {
-                        autores.Add(PopulateDrEditora(dr));
+                        editoras.Add(PopulateDrEditora(dr));
                     }
                 }
             }
-            return autores;
+            return editoras;
         }
 
         public EditoraModel PopulateDrEditora(SqlDataReader dr)
