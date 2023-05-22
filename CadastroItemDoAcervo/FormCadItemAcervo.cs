@@ -87,22 +87,22 @@ namespace CadastroItemDoAcervo
                     });
 
                     //busca o id do autor, editora, local e secao selecionados para salvar no banco de dados.
-                    int codAutor = dao.GetCodAutor(new AutorModel()
+                    string codAutor = dao.GetCodAutor(new AutorModel()
                     {
                         NomeAutor = txtNomeAutor.Text
                     });
 
-                    int codEditora = dao.GetCodEditora(new EditoraModel()
+                    string codEditora = dao.GetCodEditora(new EditoraModel()
                     {
                         NomeEditora = txtNomeEditora.Text
                     });
 
-                    int codLocal = dao.GetCodLocal(new LocalModel()
+                    string codLocal = dao.GetCodLocal(new LocalModel()
                     {
                         DescricaoLocal = txtNomeLocal.Text
                     });
 
-                    int codSecao = dao.GetCodSecao(new SecaoModel()
+                    string codSecao = dao.GetCodSecao(new SecaoModel()
                     {
                         DescricaoSecao = txtNomeSecao.Text
                     });
@@ -129,19 +129,19 @@ namespace CadastroItemDoAcervo
                                 StatusItem = cbxStatusAcervo.Text
                             }, new AutorModel()
                             {
-                                //CodAutor = codAutor,
+                                CodAutor = codAutor,
                                 NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
-                                //CodEditora = codEditora,
+                                CodEditora = codEditora,
                                 NomeEditora = txtNomeEditora.Text
                             }, new LocalModel()
                             {
-                                //CodLocal = codLocal,
+                                CodLocal = codLocal,
                                 DescricaoLocal = txtNomeLocal.Text
                             }, new SecaoModel()
                             {
-                                //CodSecao = codSecao,
+                                CodSecao = codSecao,
                                 DescricaoSecao = txtNomeSecao.Text
                             });
                             MessageBox.Show("Item do acervo atualizado com sucesso!");
@@ -162,19 +162,19 @@ namespace CadastroItemDoAcervo
 
                             }, new AutorModel()
                             {
-                                //CodAutor = codAutor,
+                                CodAutor = codAutor,
                                 NomeAutor = txtNomeAutor.Text
                             }, new EditoraModel()
                             {
-                                //CodEditora = codEditora,
+                                CodEditora = codEditora,
                                 NomeEditora = txtNomeEditora.Text
                             }, new LocalModel()
                             {
-                                //CodLocal = codLocal,
+                                CodLocal = codLocal,
                                 DescricaoLocal = txtNomeLocal.Text
                             }, new SecaoModel()
                             {
-                                //CodSecao = codSecao,
+                                CodSecao = codSecao,
                                 DescricaoSecao = txtNomeSecao.Text
                             });
                             MessageBox.Show("Item do acervo salvo com sucesso!");
@@ -188,7 +188,7 @@ namespace CadastroItemDoAcervo
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Houve um problema ao salvar o leitor!\n{ex.Message}");
+                MessageBox.Show($"Houve um problema ao salvar o item do acervo!\n{ex.Message}");
             }
         }
 
@@ -224,7 +224,7 @@ namespace CadastroItemDoAcervo
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Houve um problema ao excluir o leitor!\n{ex.Message}");
+                MessageBox.Show($"Houve um problema ao excluir o item do acervo!\n{ex.Message}");
             }
         }
 

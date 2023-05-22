@@ -54,6 +54,7 @@ namespace CadastroItemDoAcervo
                 txtCodSecao.Text = dtgDadosSecao.Rows[e.RowIndex].Cells[colCodSecao.Index].Value + "";
                 txtNomeSecao.Text = dtgDadosSecao.Rows[e.RowIndex].Cells[colNomeSecao.Index].Value + "";
             }
+            carregaTextBox();
         }
 
         private void btnSelecionarLocal_Click(object sender, EventArgs e)

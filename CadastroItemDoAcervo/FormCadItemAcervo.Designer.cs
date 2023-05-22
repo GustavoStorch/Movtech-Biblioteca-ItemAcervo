@@ -69,14 +69,14 @@
             this.colLocItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeSecaoItemAcervo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpxInsertDadosItemAcervo = new System.Windows.Forms.GroupBox();
-            this.txtNomeSecao = new System.Windows.Forms.TextBox();
-            this.txtNomeLocal = new System.Windows.Forms.TextBox();
-            this.txtNomeEditora = new System.Windows.Forms.TextBox();
-            this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.btnBuscarSecao = new System.Windows.Forms.Button();
+            this.txtNomeSecao = new System.Windows.Forms.TextBox();
             this.btnBuscarLocal = new System.Windows.Forms.Button();
+            this.txtNomeLocal = new System.Windows.Forms.TextBox();
             this.btnBuscarEditora = new System.Windows.Forms.Button();
+            this.txtNomeEditora = new System.Windows.Forms.TextBox();
             this.btnBuscarAutor = new System.Windows.Forms.Button();
+            this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.mvtBibAutorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treinamentoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mvtBibAutorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -534,56 +534,6 @@
             this.gpxInsertDadosItemAcervo.TabStop = false;
             this.gpxInsertDadosItemAcervo.Text = "Dados do Item";
             // 
-            // txtNomeSecao
-            // 
-            this.txtNomeSecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeSecao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeSecao.Location = new System.Drawing.Point(287, 131);
-            this.txtNomeSecao.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNomeSecao.Name = "txtNomeSecao";
-            this.txtNomeSecao.Size = new System.Drawing.Size(102, 20);
-            this.txtNomeSecao.TabIndex = 37;
-            // 
-            // txtNomeLocal
-            // 
-            this.txtNomeLocal.AutoCompleteCustomSource.AddRange(new string[] {
-            ""});
-            this.txtNomeLocal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtNomeLocal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtNomeLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeLocal.Location = new System.Drawing.Point(287, 88);
-            this.txtNomeLocal.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNomeLocal.Name = "txtNomeLocal";
-            this.txtNomeLocal.Size = new System.Drawing.Size(473, 20);
-            this.txtNomeLocal.TabIndex = 17;
-            // 
-            // txtNomeEditora
-            // 
-            this.txtNomeEditora.AutoCompleteCustomSource.AddRange(new string[] {
-            ""});
-            this.txtNomeEditora.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtNomeEditora.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtNomeEditora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeEditora.Location = new System.Drawing.Point(287, 65);
-            this.txtNomeEditora.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNomeEditora.Name = "txtNomeEditora";
-            this.txtNomeEditora.Size = new System.Drawing.Size(473, 20);
-            this.txtNomeEditora.TabIndex = 15;
-            // 
-            // txtNomeAutor
-            // 
-            this.txtNomeAutor.AutoCompleteCustomSource.AddRange(new string[] {
-            ""});
-            this.txtNomeAutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtNomeAutor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtNomeAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeAutor.Location = new System.Drawing.Point(287, 43);
-            this.txtNomeAutor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(473, 20);
-            this.txtNomeAutor.TabIndex = 4;
-            // 
             // btnBuscarSecao
             // 
             this.btnBuscarSecao.FlatAppearance.BorderSize = 0;
@@ -598,8 +548,19 @@
             this.btnBuscarSecao.UseVisualStyleBackColor = true;
             this.btnBuscarSecao.Click += new System.EventHandler(this.btnBuscarSecao_Click);
             // 
+            // txtNomeSecao
+            // 
+            this.txtNomeSecao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeSecao.Location = new System.Drawing.Point(287, 131);
+            this.txtNomeSecao.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNomeSecao.Name = "txtNomeSecao";
+            this.txtNomeSecao.ReadOnly = true;
+            this.txtNomeSecao.Size = new System.Drawing.Size(102, 20);
+            this.txtNomeSecao.TabIndex = 37;
+            // 
             // btnBuscarLocal
             // 
+            this.btnBuscarLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarLocal.FlatAppearance.BorderSize = 0;
             this.btnBuscarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarLocal.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -612,8 +573,25 @@
             this.btnBuscarLocal.UseVisualStyleBackColor = true;
             this.btnBuscarLocal.Click += new System.EventHandler(this.btnBuscarLocal_Click);
             // 
+            // txtNomeLocal
+            // 
+            this.txtNomeLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeLocal.AutoCompleteCustomSource.AddRange(new string[] {
+            ""});
+            this.txtNomeLocal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtNomeLocal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtNomeLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeLocal.Location = new System.Drawing.Point(287, 88);
+            this.txtNomeLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNomeLocal.Name = "txtNomeLocal";
+            this.txtNomeLocal.ReadOnly = true;
+            this.txtNomeLocal.Size = new System.Drawing.Size(473, 20);
+            this.txtNomeLocal.TabIndex = 17;
+            // 
             // btnBuscarEditora
             // 
+            this.btnBuscarEditora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEditora.FlatAppearance.BorderSize = 0;
             this.btnBuscarEditora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarEditora.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -626,8 +604,25 @@
             this.btnBuscarEditora.UseVisualStyleBackColor = true;
             this.btnBuscarEditora.Click += new System.EventHandler(this.btnBuscarEditora_Click);
             // 
+            // txtNomeEditora
+            // 
+            this.txtNomeEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeEditora.AutoCompleteCustomSource.AddRange(new string[] {
+            ""});
+            this.txtNomeEditora.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtNomeEditora.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtNomeEditora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeEditora.Location = new System.Drawing.Point(287, 65);
+            this.txtNomeEditora.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNomeEditora.Name = "txtNomeEditora";
+            this.txtNomeEditora.ReadOnly = true;
+            this.txtNomeEditora.Size = new System.Drawing.Size(473, 20);
+            this.txtNomeEditora.TabIndex = 15;
+            // 
             // btnBuscarAutor
             // 
+            this.btnBuscarAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarAutor.FlatAppearance.BorderSize = 0;
             this.btnBuscarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarAutor.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -639,6 +634,22 @@
             this.btnBuscarAutor.TabIndex = 14;
             this.btnBuscarAutor.UseVisualStyleBackColor = true;
             this.btnBuscarAutor.Click += new System.EventHandler(this.btnBuscarAutor_Click);
+            // 
+            // txtNomeAutor
+            // 
+            this.txtNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeAutor.AutoCompleteCustomSource.AddRange(new string[] {
+            ""});
+            this.txtNomeAutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtNomeAutor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtNomeAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeAutor.Location = new System.Drawing.Point(287, 43);
+            this.txtNomeAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNomeAutor.Name = "txtNomeAutor";
+            this.txtNomeAutor.ReadOnly = true;
+            this.txtNomeAutor.Size = new System.Drawing.Size(473, 20);
+            this.txtNomeAutor.TabIndex = 4;
             // 
             // mvtBibAutorBindingSource
             // 

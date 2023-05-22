@@ -55,6 +55,7 @@ namespace CadastroItemDoAcervo
                 txtCodEditora.Text = dtgDadosEditoras.Rows[e.RowIndex].Cells[colCodEditora.Index].Value + "";
                 txtNomeEditora.Text = dtgDadosEditoras.Rows[e.RowIndex].Cells[colNomeEditora.Index].Value + "";
             }
+            carregaTextBox();
         }
 
         private void btnSelecionarEditora_Click(object sender, EventArgs e)

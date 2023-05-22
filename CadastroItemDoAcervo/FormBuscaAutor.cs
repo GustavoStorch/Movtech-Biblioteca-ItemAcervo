@@ -55,6 +55,7 @@ namespace CadastroItemDoAcervo
                 txtCodAutor.Text = dtgDadosAutor.Rows[e.RowIndex].Cells[colCodAutor.Index].Value + "";
                 txtNomeAutor.Text = dtgDadosAutor.Rows[e.RowIndex].Cells[colNomeAutor.Index].Value + "";
             }
+            carregaTextBox();
         }
 
         private void btnSelectionar_Click(object sender, EventArgs e)
