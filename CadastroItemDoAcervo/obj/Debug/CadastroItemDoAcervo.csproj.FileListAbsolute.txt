@@ -11,7 +11,6 @@ C:\Users\estagiario1\source\repos\CadastroItemDoAcervo\CadastroItemDoAcervo\obj\
 C:\Users\estagiario1\source\repos\CadastroItemDoAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.pdb
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.csproj.AssemblyReference.cache
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.csproj.SuggestedBindingRedirects.cache
-C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.Form1.resources
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.Properties.Resources.resources
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.csproj.GenerateResource.cache
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.csproj.CoreCompileInputs.cache
@@ -20,3 +19,6 @@ C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\C
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\bin\Debug\CadastroItemDoAcervo.exe.config
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\bin\Debug\CadastroItemDoAcervo.exe
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\bin\Debug\CadastroItemDoAcervo.pdb
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormCadItemAcervo.resources
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormBuscaAutor.resources
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormBuscaEditora.resources

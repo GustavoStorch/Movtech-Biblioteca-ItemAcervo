@@ -12,7 +12,7 @@ namespace CadastroItemDoAcervo
     public class EditoraModel
     {
         [Key()]
-        public int CodEditora { get; set; }
+        public string CodEditora { get; set; }
 
         public string NomeEditora { get; set; }
     }
