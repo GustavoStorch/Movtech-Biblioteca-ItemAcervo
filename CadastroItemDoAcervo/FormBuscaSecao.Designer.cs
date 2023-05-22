@@ -33,9 +33,9 @@
             this.txtCodSecao = new System.Windows.Forms.TextBox();
             this.txtNomeSecao = new System.Windows.Forms.TextBox();
             this.dtgDadosSecao = new System.Windows.Forms.DataGridView();
-            this.btnSelecionarLocal = new System.Windows.Forms.Button();
             this.colCodSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelecionarLocal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosSecao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             this.txtNomeSecao.Name = "txtNomeSecao";
             this.txtNomeSecao.Size = new System.Drawing.Size(387, 20);
             this.txtNomeSecao.TabIndex = 3;
+            this.txtNomeSecao.TextChanged += new System.EventHandler(this.txtNomeSecao_TextChanged);
             // 
             // dtgDadosSecao
             // 
@@ -92,17 +93,6 @@
             this.dtgDadosSecao.TabIndex = 4;
             this.dtgDadosSecao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosSecao_CellDoubleClick);
             // 
-            // btnSelecionarLocal
-            // 
-            this.btnSelecionarLocal.Location = new System.Drawing.Point(453, 37);
-            this.btnSelecionarLocal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSelecionarLocal.Name = "btnSelecionarLocal";
-            this.btnSelecionarLocal.Size = new System.Drawing.Size(67, 21);
-            this.btnSelecionarLocal.TabIndex = 6;
-            this.btnSelecionarLocal.Text = "Selecionar";
-            this.btnSelecionarLocal.UseVisualStyleBackColor = true;
-            this.btnSelecionarLocal.Click += new System.EventHandler(this.btnSelecionarLocal_Click);
-            // 
             // colCodSecao
             // 
             this.colCodSecao.FillWeight = 30F;
@@ -115,6 +105,17 @@
             this.colNomeSecao.HeaderText = "Nome Seção";
             this.colNomeSecao.Name = "colNomeSecao";
             this.colNomeSecao.ReadOnly = true;
+            // 
+            // btnSelecionarLocal
+            // 
+            this.btnSelecionarLocal.Location = new System.Drawing.Point(453, 37);
+            this.btnSelecionarLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelecionarLocal.Name = "btnSelecionarLocal";
+            this.btnSelecionarLocal.Size = new System.Drawing.Size(67, 21);
+            this.btnSelecionarLocal.TabIndex = 6;
+            this.btnSelecionarLocal.Text = "Selecionar";
+            this.btnSelecionarLocal.UseVisualStyleBackColor = true;
+            this.btnSelecionarLocal.Click += new System.EventHandler(this.btnSelecionarLocal_Click);
             // 
             // FormBuscaSecao
             // 

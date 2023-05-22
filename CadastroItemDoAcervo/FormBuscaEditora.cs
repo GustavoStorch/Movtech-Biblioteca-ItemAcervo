@@ -62,5 +62,21 @@ namespace CadastroItemDoAcervo
         {
             carregaTextBox();
         }
+
+        private void txtNomeEditora_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtNomeEditora.Text.Trim();
+
+            foreach (DataGridViewRow row in dtgDadosEditoras.Rows)
+            {
+                string nomeAutor = row.Cells[colNomeEditora.Index].Value.ToString().Trim();
+
+                // Verifica se o nome do autor contém o filtro
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                // Define a visibilidade da linha com base no resultado do filtro
+                row.Visible = exibir;
+            }
+        }
     }
 }

@@ -73,6 +73,7 @@
             this.txtNomeLocal.Name = "txtNomeLocal";
             this.txtNomeLocal.Size = new System.Drawing.Size(387, 20);
             this.txtNomeLocal.TabIndex = 3;
+            this.txtNomeLocal.TextChanged += new System.EventHandler(this.txtNomeLocal_TextChanged);
             // 
             // btnSelecionarLocal
             // 

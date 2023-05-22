@@ -16,6 +16,7 @@ namespace CadastroItemDoAcervo
 
         public string nomeAutor { get; private set; }
 
+
         public FormBuscaAutor()
         {
             InitializeComponent();
@@ -61,6 +62,22 @@ namespace CadastroItemDoAcervo
         private void btnSelectionar_Click(object sender, EventArgs e)
         {
             carregaTextBox();
+        }
+
+        private void txtNomeAutor_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtNomeAutor.Text.Trim();
+
+            foreach (DataGridViewRow row in dtgDadosAutor.Rows)
+            {
+                string nomeAutor = row.Cells[colNomeAutor.Index].Value.ToString().Trim();
+
+                // Verifica se o nome do autor contém o filtro
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                // Define a visibilidade da linha com base no resultado do filtro
+                row.Visible = exibir;
+            }
         }
     }
 }

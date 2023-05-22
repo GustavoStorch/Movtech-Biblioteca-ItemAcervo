@@ -42,40 +42,46 @@
             // lblCodEditora
             // 
             this.lblCodEditora.AutoSize = true;
-            this.lblCodEditora.Location = new System.Drawing.Point(12, 15);
+            this.lblCodEditora.Location = new System.Drawing.Point(8, 10);
+            this.lblCodEditora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodEditora.Name = "lblCodEditora";
-            this.lblCodEditora.Size = new System.Drawing.Size(63, 20);
+            this.lblCodEditora.Size = new System.Drawing.Size(43, 13);
             this.lblCodEditora.TabIndex = 0;
             this.lblCodEditora.Text = "Código:";
             // 
             // lblNomeEditora
             // 
             this.lblNomeEditora.AutoSize = true;
-            this.lblNomeEditora.Location = new System.Drawing.Point(12, 57);
+            this.lblNomeEditora.Location = new System.Drawing.Point(8, 37);
+            this.lblNomeEditora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeEditora.Name = "lblNomeEditora";
-            this.lblNomeEditora.Size = new System.Drawing.Size(55, 20);
+            this.lblNomeEditora.Size = new System.Drawing.Size(38, 13);
             this.lblNomeEditora.TabIndex = 1;
             this.lblNomeEditora.Text = "Nome:";
             // 
             // txtCodEditora
             // 
-            this.txtCodEditora.Location = new System.Drawing.Point(81, 12);
+            this.txtCodEditora.Location = new System.Drawing.Point(54, 8);
+            this.txtCodEditora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodEditora.Name = "txtCodEditora";
-            this.txtCodEditora.Size = new System.Drawing.Size(176, 26);
+            this.txtCodEditora.Size = new System.Drawing.Size(119, 20);
             this.txtCodEditora.TabIndex = 2;
             // 
             // txtNomeEditora
             // 
-            this.txtNomeEditora.Location = new System.Drawing.Point(81, 54);
+            this.txtNomeEditora.Location = new System.Drawing.Point(54, 35);
+            this.txtNomeEditora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomeEditora.Name = "txtNomeEditora";
-            this.txtNomeEditora.Size = new System.Drawing.Size(596, 26);
+            this.txtNomeEditora.Size = new System.Drawing.Size(399, 20);
             this.txtNomeEditora.TabIndex = 3;
+            this.txtNomeEditora.TextChanged += new System.EventHandler(this.txtNomeEditora_TextChanged);
             // 
             // btnSelecionarEditora
             // 
-            this.btnSelecionarEditora.Location = new System.Drawing.Point(683, 51);
+            this.btnSelecionarEditora.Location = new System.Drawing.Point(455, 33);
+            this.btnSelecionarEditora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSelecionarEditora.Name = "btnSelecionarEditora";
-            this.btnSelecionarEditora.Size = new System.Drawing.Size(101, 32);
+            this.btnSelecionarEditora.Size = new System.Drawing.Size(67, 21);
             this.btnSelecionarEditora.TabIndex = 4;
             this.btnSelecionarEditora.Text = "Selecionar";
             this.btnSelecionarEditora.UseVisualStyleBackColor = true;
@@ -89,14 +95,15 @@
             this.dtgDadosEditoras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodEditora,
             this.colNomeEditora});
-            this.dtgDadosEditoras.Location = new System.Drawing.Point(12, 89);
+            this.dtgDadosEditoras.Location = new System.Drawing.Point(8, 58);
+            this.dtgDadosEditoras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgDadosEditoras.MultiSelect = false;
             this.dtgDadosEditoras.Name = "dtgDadosEditoras";
             this.dtgDadosEditoras.ReadOnly = true;
             this.dtgDadosEditoras.RowHeadersWidth = 62;
             this.dtgDadosEditoras.RowTemplate.Height = 28;
             this.dtgDadosEditoras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDadosEditoras.Size = new System.Drawing.Size(772, 300);
+            this.dtgDadosEditoras.Size = new System.Drawing.Size(515, 195);
             this.dtgDadosEditoras.TabIndex = 5;
             this.dtgDadosEditoras.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosEditoras_CellDoubleClick);
             // 
@@ -119,15 +126,16 @@
             // 
             // FormBuscaEditora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 401);
+            this.ClientSize = new System.Drawing.Size(531, 261);
             this.Controls.Add(this.dtgDadosEditoras);
             this.Controls.Add(this.btnSelecionarEditora);
             this.Controls.Add(this.txtNomeEditora);
             this.Controls.Add(this.txtCodEditora);
             this.Controls.Add(this.lblNomeEditora);
             this.Controls.Add(this.lblCodEditora);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormBuscaEditora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Editora";
