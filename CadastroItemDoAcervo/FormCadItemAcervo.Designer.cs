@@ -227,7 +227,7 @@
             this.txtNomeItemAcervo.MaxLength = 200;
             this.txtNomeItemAcervo.Name = "txtNomeItemAcervo";
             this.txtNomeItemAcervo.Size = new System.Drawing.Size(773, 26);
-            this.txtNomeItemAcervo.TabIndex = 2;
+            this.txtNomeItemAcervo.TabIndex = 1;
             // 
             // txtNomeColecaoAcervo
             // 
@@ -235,7 +235,7 @@
             this.txtNomeColecaoAcervo.Location = new System.Drawing.Point(430, 201);
             this.txtNomeColecaoAcervo.Name = "txtNomeColecaoAcervo";
             this.txtNomeColecaoAcervo.Size = new System.Drawing.Size(773, 26);
-            this.txtNomeColecaoAcervo.TabIndex = 10;
+            this.txtNomeColecaoAcervo.TabIndex = 12;
             // 
             // cbxTipoItemAcervo
             // 
@@ -251,7 +251,7 @@
             this.cbxTipoItemAcervo.Location = new System.Drawing.Point(126, 200);
             this.cbxTipoItemAcervo.Name = "cbxTipoItemAcervo";
             this.cbxTipoItemAcervo.Size = new System.Drawing.Size(172, 28);
-            this.cbxTipoItemAcervo.TabIndex = 9;
+            this.cbxTipoItemAcervo.TabIndex = 11;
             this.cbxTipoItemAcervo.Tag = "";
             // 
             // txtNumExemplarAcervo
@@ -261,7 +261,7 @@
             this.txtNumExemplarAcervo.MaxLength = 3;
             this.txtNumExemplarAcervo.Name = "txtNumExemplarAcervo";
             this.txtNumExemplarAcervo.Size = new System.Drawing.Size(172, 26);
-            this.txtNumExemplarAcervo.TabIndex = 3;
+            this.txtNumExemplarAcervo.TabIndex = 2;
             // 
             // txtVolumeAcervo
             // 
@@ -279,7 +279,7 @@
             this.txtAnoEdicaoAcervo.MaxLength = 4;
             this.txtAnoEdicaoAcervo.Name = "txtAnoEdicaoAcervo";
             this.txtAnoEdicaoAcervo.Size = new System.Drawing.Size(172, 26);
-            this.txtAnoEdicaoAcervo.TabIndex = 7;
+            this.txtAnoEdicaoAcervo.TabIndex = 8;
             // 
             // txtLocalizacaoAcervo
             // 
@@ -288,7 +288,7 @@
             this.txtLocalizacaoAcervo.MaxLength = 50;
             this.txtLocalizacaoAcervo.Name = "txtLocalizacaoAcervo";
             this.txtLocalizacaoAcervo.Size = new System.Drawing.Size(449, 26);
-            this.txtLocalizacaoAcervo.TabIndex = 13;
+            this.txtLocalizacaoAcervo.TabIndex = 16;
             // 
             // cbxStatusAcervo
             // 
@@ -301,7 +301,7 @@
             this.cbxStatusAcervo.Location = new System.Drawing.Point(128, 243);
             this.cbxStatusAcervo.Name = "cbxStatusAcervo";
             this.cbxStatusAcervo.Size = new System.Drawing.Size(172, 28);
-            this.cbxStatusAcervo.TabIndex = 11;
+            this.cbxStatusAcervo.TabIndex = 13;
             // 
             // btnExcluir
             // 
@@ -309,7 +309,7 @@
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(116, 34);
-            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.TabIndex = 18;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -320,7 +320,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(116, 34);
-            this.btnSalvar.TabIndex = 14;
+            this.btnSalvar.TabIndex = 17;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -354,7 +354,7 @@
             this.dtgDadosItemAcervo.RowTemplate.Height = 28;
             this.dtgDadosItemAcervo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDadosItemAcervo.Size = new System.Drawing.Size(1216, 382);
-            this.dtgDadosItemAcervo.TabIndex = 16;
+            this.dtgDadosItemAcervo.TabIndex = 19;
             this.dtgDadosItemAcervo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosItemAcervo_CellDoubleClick);
             // 
             // colCodItemAcervo
@@ -507,7 +507,7 @@
             this.btnBuscarSecao.Location = new System.Drawing.Point(588, 242);
             this.btnBuscarSecao.Name = "btnBuscarSecao";
             this.btnBuscarSecao.Size = new System.Drawing.Size(58, 28);
-            this.btnBuscarSecao.TabIndex = 37;
+            this.btnBuscarSecao.TabIndex = 15;
             this.btnBuscarSecao.UseVisualStyleBackColor = true;
             this.btnBuscarSecao.Click += new System.EventHandler(this.btnBuscarSecao_Click);
             // 
@@ -518,7 +518,7 @@
             this.txtNomeSecao.Name = "txtNomeSecao";
             this.txtNomeSecao.ReadOnly = true;
             this.txtNomeSecao.Size = new System.Drawing.Size(152, 26);
-            this.txtNomeSecao.TabIndex = 37;
+            this.txtNomeSecao.TabIndex = 14;
             // 
             // btnBuscarLocal
             // 
@@ -529,7 +529,7 @@
             this.btnBuscarLocal.Location = new System.Drawing.Point(1146, 156);
             this.btnBuscarLocal.Name = "btnBuscarLocal";
             this.btnBuscarLocal.Size = new System.Drawing.Size(58, 28);
-            this.btnBuscarLocal.TabIndex = 18;
+            this.btnBuscarLocal.TabIndex = 10;
             this.btnBuscarLocal.UseVisualStyleBackColor = true;
             this.btnBuscarLocal.Click += new System.EventHandler(this.btnBuscarLocal_Click);
             // 
@@ -544,7 +544,7 @@
             this.txtNomeLocal.Name = "txtNomeLocal";
             this.txtNomeLocal.ReadOnly = true;
             this.txtNomeLocal.Size = new System.Drawing.Size(708, 26);
-            this.txtNomeLocal.TabIndex = 17;
+            this.txtNomeLocal.TabIndex = 9;
             // 
             // btnBuscarEditora
             // 
@@ -555,7 +555,7 @@
             this.btnBuscarEditora.Location = new System.Drawing.Point(1146, 112);
             this.btnBuscarEditora.Name = "btnBuscarEditora";
             this.btnBuscarEditora.Size = new System.Drawing.Size(58, 28);
-            this.btnBuscarEditora.TabIndex = 16;
+            this.btnBuscarEditora.TabIndex = 7;
             this.btnBuscarEditora.UseVisualStyleBackColor = true;
             this.btnBuscarEditora.Click += new System.EventHandler(this.btnBuscarEditora_Click);
             // 
@@ -570,7 +570,7 @@
             this.txtNomeEditora.Name = "txtNomeEditora";
             this.txtNomeEditora.ReadOnly = true;
             this.txtNomeEditora.Size = new System.Drawing.Size(708, 26);
-            this.txtNomeEditora.TabIndex = 15;
+            this.txtNomeEditora.TabIndex = 6;
             // 
             // btnBuscarAutor
             // 
@@ -581,7 +581,7 @@
             this.btnBuscarAutor.Location = new System.Drawing.Point(1146, 71);
             this.btnBuscarAutor.Name = "btnBuscarAutor";
             this.btnBuscarAutor.Size = new System.Drawing.Size(58, 28);
-            this.btnBuscarAutor.TabIndex = 14;
+            this.btnBuscarAutor.TabIndex = 4;
             this.btnBuscarAutor.UseVisualStyleBackColor = true;
             this.btnBuscarAutor.Click += new System.EventHandler(this.btnBuscarAutor_Click);
             // 
@@ -596,7 +596,7 @@
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.ReadOnly = true;
             this.txtNomeAutor.Size = new System.Drawing.Size(708, 26);
-            this.txtNomeAutor.TabIndex = 4;
+            this.txtNomeAutor.TabIndex = 3;
             // 
             // mvtBibAutorBindingSource
             // 
