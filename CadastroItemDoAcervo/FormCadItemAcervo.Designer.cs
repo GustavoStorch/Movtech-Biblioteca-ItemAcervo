@@ -204,7 +204,7 @@
             // lblStatusAcervo
             // 
             this.lblStatusAcervo.AutoSize = true;
-            this.lblStatusAcervo.Location = new System.Drawing.Point(13, 246);
+            this.lblStatusAcervo.Location = new System.Drawing.Point(6, 246);
             this.lblStatusAcervo.Name = "lblStatusAcervo";
             this.lblStatusAcervo.Size = new System.Drawing.Size(60, 20);
             this.lblStatusAcervo.TabIndex = 13;
