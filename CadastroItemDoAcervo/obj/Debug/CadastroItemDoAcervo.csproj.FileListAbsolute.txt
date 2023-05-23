@@ -37,3 +37,5 @@ C:\Users\Gustavo\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\Cadas
 C:\Users\Gustavo\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.exe
 C:\Users\Gustavo\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.pdb
 C:\Users\Gustavo\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormBuscaSecao.resources
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormBuscaLocal.resources
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-ItemAcervo\CadastroItemDoAcervo\obj\Debug\CadastroItemDoAcervo.FormBuscaSecao.resources

@@ -52,7 +52,6 @@ namespace CadastroItemDoAcervo
         {
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                txtCodEditora.Text = dtgDadosEditoras.Rows[e.RowIndex].Cells[colCodEditora.Index].Value + "";
                 txtNomeEditora.Text = dtgDadosEditoras.Rows[e.RowIndex].Cells[colNomeEditora.Index].Value + "";
             }
             carregaTextBox();

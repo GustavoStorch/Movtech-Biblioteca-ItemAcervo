@@ -51,7 +51,6 @@ namespace CadastroItemDoAcervo
         {
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                txtCodLocal.Text = dtgDadosLocal.Rows[e.RowIndex].Cells[colCodLocal.Index].Value + "";
                 txtNomeLocal.Text = dtgDadosLocal.Rows[e.RowIndex].Cells[colNomeLocal.Index].Value + "";
             }
             carregaTextBox();
