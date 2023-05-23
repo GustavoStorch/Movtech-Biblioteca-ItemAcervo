@@ -368,38 +368,5 @@ namespace CadastroItemDoAcervo
                 LocalModel = nomeLocal
             };
         }
-        public List<string> GetAutores(AutorModel autor)
-        {
-            try
-            {
-                using (SqlConnection connection = DaoConnection.GetConexao())
-                {
-                    using (SqlCommand command = new SqlCommand())
-                    {
-                        command.Connection = connection;
-                        command.CommandText = "SELECT nomeAutor FROM mvtBibAutor WHERE nomeAutor LIKE @nomeAutor";
-                        command.Parameters.AddWithValue("@nomeAutor", "%" + autor.NomeAutor + "%");
-
-                        List<string> autores = new List<string>();
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                string nomeAutor = reader["nomeAutor"].ToString();
-                                autores.Add(nomeAutor);
-                            }
-                        }
-
-                        return autores;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
     }
 }
