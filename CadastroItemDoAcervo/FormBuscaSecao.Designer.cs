@@ -106,6 +106,7 @@
             this.Controls.Add(this.lblNomeSecao);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormBuscaSecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busca Seção";
             this.Load += new System.EventHandler(this.FormBuscaSecao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosSecao)).EndInit();
