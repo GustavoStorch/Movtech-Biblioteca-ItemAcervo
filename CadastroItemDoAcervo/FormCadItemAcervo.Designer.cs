@@ -262,6 +262,7 @@
             this.txtNumExemplarAcervo.Name = "txtNumExemplarAcervo";
             this.txtNumExemplarAcervo.Size = new System.Drawing.Size(172, 26);
             this.txtNumExemplarAcervo.TabIndex = 2;
+            this.txtNumExemplarAcervo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumExemplarAcervo_KeyPress);
             // 
             // txtVolumeAcervo
             // 
@@ -271,6 +272,7 @@
             this.txtVolumeAcervo.Name = "txtVolumeAcervo";
             this.txtVolumeAcervo.Size = new System.Drawing.Size(172, 26);
             this.txtVolumeAcervo.TabIndex = 5;
+            this.txtVolumeAcervo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVolumeAcervo_KeyPress);
             // 
             // txtAnoEdicaoAcervo
             // 
@@ -280,6 +282,7 @@
             this.txtAnoEdicaoAcervo.Name = "txtAnoEdicaoAcervo";
             this.txtAnoEdicaoAcervo.Size = new System.Drawing.Size(172, 26);
             this.txtAnoEdicaoAcervo.TabIndex = 8;
+            this.txtAnoEdicaoAcervo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnoEdicaoAcervo_KeyPress);
             // 
             // txtLocalizacaoAcervo
             // 

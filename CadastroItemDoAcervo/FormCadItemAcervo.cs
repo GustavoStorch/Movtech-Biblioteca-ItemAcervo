@@ -255,7 +255,6 @@ namespace CadastroItemDoAcervo
                 List<ItemAcervoModel> itensAcervos = dao.GetItensAcervo();
                 foreach (ItemAcervoModel itemAcervo in itensAcervos)
                 {
-                    AutorModel autor = new AutorModel();
                     DataGridViewRow row = dtgDadosItemAcervo.Rows[dtgDadosItemAcervo.Rows.Add()];
                     row.Cells[colCodItemAcervo.Index].Value = itemAcervo.CodItem;
                     row.Cells[colNomeItemAcervo.Index].Value = itemAcervo.Nome;
@@ -333,6 +332,30 @@ namespace CadastroItemDoAcervo
         private void btnBuscarSecao_Click(object sender, EventArgs e)
         {
             CarregaFormBuscaSecao();
+        }
+
+        private void txtNumExemplarAcervo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && !(e.KeyChar == (char)Keys.Space))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtVolumeAcervo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && !(e.KeyChar == (char)Keys.Space))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAnoEdicaoAcervo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && !(e.KeyChar == (char)Keys.Space))
+            {
+                e.Handled = true;
+            } 
         }
     }
 }
