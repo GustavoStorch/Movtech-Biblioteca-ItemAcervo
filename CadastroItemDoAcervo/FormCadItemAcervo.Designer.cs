@@ -103,7 +103,7 @@
             // lblNomeAcervo
             // 
             this.lblNomeAcervo.AutoSize = true;
-            this.lblNomeAcervo.Location = new System.Drawing.Point(304, 35);
+            this.lblNomeAcervo.Location = new System.Drawing.Point(306, 34);
             this.lblNomeAcervo.Name = "lblNomeAcervo";
             this.lblNomeAcervo.Size = new System.Drawing.Size(55, 20);
             this.lblNomeAcervo.TabIndex = 2;
@@ -112,7 +112,7 @@
             // lblNomeLocalAcervo
             // 
             this.lblNomeLocalAcervo.AutoSize = true;
-            this.lblNomeLocalAcervo.Location = new System.Drawing.Point(311, 160);
+            this.lblNomeLocalAcervo.Location = new System.Drawing.Point(306, 160);
             this.lblNomeLocalAcervo.Name = "lblNomeLocalAcervo";
             this.lblNomeLocalAcervo.Size = new System.Drawing.Size(97, 20);
             this.lblNomeLocalAcervo.TabIndex = 3;
@@ -130,7 +130,7 @@
             // lblNomeEditoraAcervo
             // 
             this.lblNomeEditoraAcervo.AutoSize = true;
-            this.lblNomeEditoraAcervo.Location = new System.Drawing.Point(311, 116);
+            this.lblNomeEditoraAcervo.Location = new System.Drawing.Point(306, 116);
             this.lblNomeEditoraAcervo.Name = "lblNomeEditoraAcervo";
             this.lblNomeEditoraAcervo.Size = new System.Drawing.Size(110, 20);
             this.lblNomeEditoraAcervo.TabIndex = 5;
@@ -139,7 +139,7 @@
             // lblNomeColecaoAcervo
             // 
             this.lblNomeColecaoAcervo.AutoSize = true;
-            this.lblNomeColecaoAcervo.Location = new System.Drawing.Point(311, 203);
+            this.lblNomeColecaoAcervo.Location = new System.Drawing.Point(304, 203);
             this.lblNomeColecaoAcervo.Name = "lblNomeColecaoAcervo";
             this.lblNomeColecaoAcervo.Size = new System.Drawing.Size(117, 20);
             this.lblNomeColecaoAcervo.TabIndex = 6;
@@ -195,7 +195,7 @@
             // lblSecaoAcervo
             // 
             this.lblSecaoAcervo.AutoSize = true;
-            this.lblSecaoAcervo.Location = new System.Drawing.Point(311, 246);
+            this.lblSecaoAcervo.Location = new System.Drawing.Point(306, 246);
             this.lblSecaoAcervo.Name = "lblSecaoAcervo";
             this.lblSecaoAcervo.Size = new System.Drawing.Size(59, 20);
             this.lblSecaoAcervo.TabIndex = 12;
@@ -222,6 +222,8 @@
             // 
             // txtNomeItemAcervo
             // 
+            this.txtNomeItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeItemAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeItemAcervo.Location = new System.Drawing.Point(430, 32);
             this.txtNomeItemAcervo.MaxLength = 200;
@@ -231,6 +233,8 @@
             // 
             // txtNomeColecaoAcervo
             // 
+            this.txtNomeColecaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeColecaoAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeColecaoAcervo.Location = new System.Drawing.Point(430, 201);
             this.txtNomeColecaoAcervo.Name = "txtNomeColecaoAcervo";
@@ -286,6 +290,8 @@
             // 
             // txtLocalizacaoAcervo
             // 
+            this.txtLocalizacaoAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocalizacaoAcervo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLocalizacaoAcervo.Location = new System.Drawing.Point(754, 245);
             this.txtLocalizacaoAcervo.MaxLength = 50;
@@ -308,6 +314,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.Location = new System.Drawing.Point(1112, 308);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluir.Name = "btnExcluir";
@@ -319,6 +326,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.Location = new System.Drawing.Point(988, 308);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
@@ -332,6 +340,9 @@
             // 
             this.dtgDadosItemAcervo.AllowUserToAddRows = false;
             this.dtgDadosItemAcervo.AllowUserToDeleteRows = false;
+            this.dtgDadosItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgDadosItemAcervo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDadosItemAcervo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDadosItemAcervo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -464,6 +475,8 @@
             // 
             // gpxInsertDadosItemAcervo
             // 
+            this.gpxInsertDadosItemAcervo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gpxInsertDadosItemAcervo.Controls.Add(this.btnBuscarSecao);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.txtNomeSecao);
             this.gpxInsertDadosItemAcervo.Controls.Add(this.btnBuscarLocal);
@@ -525,6 +538,7 @@
             // 
             // btnBuscarLocal
             // 
+            this.btnBuscarLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarLocal.FlatAppearance.BorderSize = 0;
             this.btnBuscarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarLocal.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -538,6 +552,8 @@
             // 
             // txtNomeLocal
             // 
+            this.txtNomeLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeLocal.AutoCompleteCustomSource.AddRange(new string[] {
             ""});
             this.txtNomeLocal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -551,6 +567,7 @@
             // 
             // btnBuscarEditora
             // 
+            this.btnBuscarEditora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEditora.FlatAppearance.BorderSize = 0;
             this.btnBuscarEditora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarEditora.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -564,6 +581,8 @@
             // 
             // txtNomeEditora
             // 
+            this.txtNomeEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeEditora.AutoCompleteCustomSource.AddRange(new string[] {
             ""});
             this.txtNomeEditora.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -577,6 +596,7 @@
             // 
             // btnBuscarAutor
             // 
+            this.btnBuscarAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarAutor.FlatAppearance.BorderSize = 0;
             this.btnBuscarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarAutor.ForeColor = System.Drawing.SystemColors.AppWorkspace;
@@ -590,6 +610,8 @@
             // 
             // txtNomeAutor
             // 
+            this.txtNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeAutor.AutoCompleteCustomSource.AddRange(new string[] {
             ""});
             this.txtNomeAutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
