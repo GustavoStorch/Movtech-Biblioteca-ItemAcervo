@@ -307,8 +307,7 @@
             this.cbxStatusAcervo.FormattingEnabled = true;
             this.cbxStatusAcervo.Items.AddRange(new object[] {
             "Disponível",
-            "Emprestado",
-            "Reservado"});
+            "Emprestado"});
             this.cbxStatusAcervo.Location = new System.Drawing.Point(128, 243);
             this.cbxStatusAcervo.MaxLength = 50;
             this.cbxStatusAcervo.Name = "cbxStatusAcervo";
