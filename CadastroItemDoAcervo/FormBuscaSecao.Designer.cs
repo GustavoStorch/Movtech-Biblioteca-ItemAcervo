@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscaSecao));
             this.lblNomeSecao = new System.Windows.Forms.Label();
             this.txtNomeSecao = new System.Windows.Forms.TextBox();
             this.dtgDadosSecao = new System.Windows.Forms.DataGridView();
@@ -104,6 +105,7 @@
             this.Controls.Add(this.dtgDadosSecao);
             this.Controls.Add(this.txtNomeSecao);
             this.Controls.Add(this.lblNomeSecao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormBuscaSecao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

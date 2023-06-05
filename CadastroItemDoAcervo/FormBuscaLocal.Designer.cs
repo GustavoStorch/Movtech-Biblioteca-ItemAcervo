@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscaLocal));
             this.lblNomeLocal = new System.Windows.Forms.Label();
             this.txtNomeLocal = new System.Windows.Forms.TextBox();
             this.dtgDadosLocal = new System.Windows.Forms.DataGridView();
@@ -104,6 +105,7 @@
             this.Controls.Add(this.dtgDadosLocal);
             this.Controls.Add(this.txtNomeLocal);
             this.Controls.Add(this.lblNomeLocal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormBuscaLocal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

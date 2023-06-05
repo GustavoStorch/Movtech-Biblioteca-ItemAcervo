@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscaEditora));
             this.lblNomeEditora = new System.Windows.Forms.Label();
             this.txtNomeEditora = new System.Windows.Forms.TextBox();
             this.dtgDadosEditoras = new System.Windows.Forms.DataGridView();
@@ -102,6 +103,7 @@
             this.Controls.Add(this.dtgDadosEditoras);
             this.Controls.Add(this.txtNomeEditora);
             this.Controls.Add(this.lblNomeEditora);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscaEditora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Editora";
